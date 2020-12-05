@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link rel="icon" href="img/favicon-star.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      .alert-box {
+        background: grey;
+        padding: 20px;
+        color: white;
+        border-radius: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ● -->
+    <div>
+      <h1>● C 02 자바스크립트의 목적과 셀렉터</h1>
+      <h3 id="test">안녕하세요</h3>
+    </div>
+
+    <div>
+      <h1>"● C 03 onclick 속성으로 버튼 기능개발 : Alert 박스 만들기</h1>
+      <!-- onclick: 버튼 눌렀을때 안의 자바스크립트 실행 -->
+      <div class="alert-box" id="alert">안내창</div>
+      <button
+        onclick="document.getElementById('alert').style.display = 'block';"
+      >
+        열기버튼
+      </button>
+    </div>
+
+    <div>
+      <h1>●C 04 function 문법으로 코드 줄이기 / 에러 체크하기</h1>
+      
+      <button onclick="안내창닫기()">닫기버튼</button>
+    </div>
+  </body>
+</html>
