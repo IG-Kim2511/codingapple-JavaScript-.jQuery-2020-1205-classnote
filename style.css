@@ -1,1 +1,17 @@
-/* ● */
+
+.title{
+    background-color: lightsteelblue;
+}
+
+
+/* 🦄c3  */
+
+.alert-box3 {
+    background: grey;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+
+
+    display: none;  /*  js c3  */
+  }
