@@ -16,7 +16,7 @@ console.log("● C 03 onclick 속성으로 버튼 기능개발 : Alert 박스 �
 
 
 
-// ●C 04 function 문법으로 코드 줄이기 / 에러 체크하기
+// 🦄04 function 문법으로 코드 줄이기/ 에러 체크하기
 console.log("●C 04 ");
 
 // function: 긴 js문장을 한단어로 축약,여러번 재사용 할때
