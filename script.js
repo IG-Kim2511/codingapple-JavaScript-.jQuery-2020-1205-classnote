@@ -7,7 +7,10 @@ console.log("C 02 자바스크립트의 목적과 셀렉터");
 // selector, method
 
 document.getElementById("test").innerHTML = "바보😛";
+
 document.getElementById("test").style.color = "red";
+
+
 
 // 🦄c3 onclick 속성으로 버튼 기능개발 : Alert 박스 만들기
 console.log("● C 03 onclick 속성으로 버튼 기능개발 : Alert 박스 만들기");
