@@ -42,19 +42,24 @@
 
     <section class="c5">
       <p class="title">
-        🦄5 parameter : function을 쓰는 이유 (function의 두번째 기능)
+        🦄5 parameter: function을 쓰는 이유 (function의 두번째 기능)
       </p>
 
       <!-- js 5-1 -->
       <div class="alert-box" id="alert5"> style.display = 'block'</div>
       <button onclick="alert열기5()">열기</button>
       <button onclick="alert닫기5()">닫기</button>
-      
+
+      <!-- js 5-2) parameter 쓰기  -->
       <div>
-        <br>      
-        <!-- js 5-2) parameter 쓰기  -->
+        ig5('block');       
         <button onclick="ig5('block')">열기</button>
         <button onclick="ig5('none')">닫기</button>
+      </div>
+
+      <!-- js 5-3) parameter 여러개 사용가능 -->
+      <div>
+        <button onclick="ig5_3('alert5','block')">열기</button>
       </div>
     </section>
   </body>
