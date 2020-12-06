@@ -48,25 +48,25 @@ function alert닫기5(){
 
 parameter 장점 : 함수1개로 parameter만 바꾸면서 여러기능 만듬*/  
 
-function ig5(파라미터){
+function alert5(파라미터){
   document.getElementById('alert5').style.display=파라미터;
 }
 /* 
-ig5('파라미터');
-ig5(123);
+alert5('파라미터');
+alert5(123);
 
-ig5('block');
-ig5('none'); */
+alert5('block');
+alert5('none'); */
 
 
 // js 5-3) parameter 여러개 사용가능
 /* 
 사용할 곳 지정해서 집어넣으면 끝 */
 
-function ig5_3(파라미터1,파라미터2){
+function alert5_3(파라미터1,파라미터2){
   document.getElementById(파라미터1).style.display=파라미터2;
 }
 
-// ig5_3('파라미터1','파라미터2');
+// alert5_3('파라미터1','파라미터2');
 
 
