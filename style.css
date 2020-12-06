@@ -1,6 +1,11 @@
+body{
+  max-width: 1000px;
+}
+
 .title {
   background-color: lightsteelblue;
 }
+
 
 /* 🦄c3  */
 
@@ -10,5 +15,7 @@
   color: white;
   border-radius: 10px;
 
-  display: none; /*  js 3-1  */
+  display: none; /*  js 3-1)  */
 }
+
+
