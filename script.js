@@ -81,3 +81,12 @@ function 안내창6_2(파라미터1,파라미터2){
 /* 👉html에 넣음
 안내창6_2('block','아이디를 입력하세요.');
 안내창6_2('block','비번을 입력하세요.'); */
+
+
+// 🦄c7 jQuery 설치와 기초 셀렉터 & querySelector
+
+/* querySelector : 
+
+(예제 둘다 같은 뜻)
+document.querySelector(#title6_2)
+document.getElementById('title6_2') */
