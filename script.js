@@ -108,3 +108,10 @@ click
 keydown
 scroll
 ...etc */
+
+// 🦄c9 Bootstrap 사용하기와 모달창 UI 개발
+/* 
+UI만들기 공식
+1. HTML/CSS로 미리 디자인해놓기
+2. 평소엔 안보이게 숨기기
+3. 버튼을 눌렀을 때 보여주기  */
