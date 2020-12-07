@@ -97,7 +97,8 @@ document.getElementById('title6_2') */
 // 🦄c8 addEventListener (이벤트 리스너)
 
 /* 
-document.querySelector().addEventListener('click',function( ));
+document.querySelector('#title6_2').addEventListener('click',function( ));
+
 
 html에 집어넣는 JS는 이제 그만, script 에서 모든 기능 개발
 
@@ -120,9 +121,14 @@ UI만들기 공식
 
 // 🦄c11 if/else 조건문을 배워보자
 
-if ( 3 > 1 ){
+if ( 1 > 3 ) {
   console.log('안녕')
+} else if ( 1 < 2 ) {
+  console.log('반가워')
+} else {
+  console.log('잘가')
 }
+
 /* false류의 값들
 이런 값들도 if문 소괄호 안에서는 false로 판단합니다. 
 0
@@ -130,3 +136,21 @@ if ( 3 > 1 ){
 null
 undefined
 NaN */
+
+/* 🚀코딩 팁 : 먼저 한글로 알고리즘을 작성해보고, 그에 따라서 코딩함 */
+
+
+// 🦄c12 else if, and, or 조건문 (폼개발로 배우는 )
+
+/*  and, or 조건문
+and : &&  👉 2개 중 1개만 맞으면 false
+or : ||  👉 2개 중 1개만 맞아도 true*/
+
+if ( 1 == 1 && 1 == 2 ) {
+  console.log('안녕')
+}
+
+if ( 1 == 1 || 2 == 3 ) {
+  console.log('안녕')
+}
+
