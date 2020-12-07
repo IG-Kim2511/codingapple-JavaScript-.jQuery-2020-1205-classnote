@@ -88,5 +88,23 @@ function 안내창6_2(파라미터1,파라미터2){
 /* querySelector : 
 
 (예제 둘다 같은 뜻)
-document.querySelector(#title6_2)
+
+document.querySelector('#title6_2')
+
 document.getElementById('title6_2') */
+
+
+// 🦄c8 addEventListener (이벤트 리스너)
+
+/* 
+document.querySelector().addEventListener('click',function( ));
+
+html에 집어넣는 JS는 이제 그만, script 에서 모든 기능 개발
+
+얘가 클릭이 일어나면~ 내부코드를 실행해주셈
+
+method 구글링👉
+click
+keydown
+scroll
+...etc */
