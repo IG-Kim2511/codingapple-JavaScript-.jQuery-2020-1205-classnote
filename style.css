@@ -6,6 +6,9 @@ body{
   background-color: lightsteelblue;
 }
 
+.red{
+  background-color: red;
+}
 
 /* 🦄c3  */
 
@@ -17,5 +20,4 @@ body{
 
   display: none; /*  js 3-1)  */
 }
-
 

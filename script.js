@@ -94,12 +94,13 @@ document.querySelector('#title6_2')
 document.getElementById('title6_2') */
 
 
+
 // 🦄c8 addEventListener (이벤트 리스너)
+document.querySelector('.btn8').addEventListener('click',()=>{
+  document.querySelector('.btn8').classList.toggle("red");
+  });
 
 /* 
-document.querySelector('#title6_2').addEventListener('click',function( ));
-
-
 html에 집어넣는 JS는 이제 그만, script 에서 모든 기능 개발
 
 얘가 클릭이 일어나면~ 내부코드를 실행해주셈
@@ -280,3 +281,12 @@ var 리필양 = (첫커피양 * 2 / 3);
 마신커피 = 마신커피 + 리필양;
 
 console.log(마신커피)
+
+
+// 🦄c17 jQuery Animate 함수(애니메이션 UI 1 :)
+/* 
+camelCase작명법
+'-'는 js에서 뺄셈을 의미해서 작명에  쓸수없음 */
+
+
+
