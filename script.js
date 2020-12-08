@@ -179,3 +179,13 @@ function 삼육구게임(숫자){
 }
 
 // 🦄c14 else if 활용 : 폼 전송시 공백체크 기능 만들기
+
+/* 
+nodeValue() : input안의 내용물
+
+"" : 빈칸
+
+자주 쓰이는 event  :
+click 
+input : 글을 쓰고 있을때
+change : 글 다 쓰고 끝났을때 (빈칸이 글로 채워지면서 value가 바뀌었을때) */
