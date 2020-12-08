@@ -6,9 +6,7 @@ body{
   background-color: lightsteelblue;
 }
 
-.red{
-  background-color: red;
-}
+
 
 /* 🦄c3  */
 
@@ -21,3 +19,11 @@ body{
   display: none; /*  js 3-1)  */
 }
 
+/* js 8, js 18 */
+
+.red{
+  background-color: red;
+  transition: all 1s;  /* c18 */
+  transform: scale(2); /* c18 */
+
+}

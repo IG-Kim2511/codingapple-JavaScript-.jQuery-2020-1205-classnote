@@ -104,7 +104,7 @@ document.querySelector('.btn8').addEventListener('click',()=>{
 html에 집어넣는 JS는 이제 그만, script 에서 모든 기능 개발
 
 얘가 클릭이 일어나면~ 내부코드를 실행해주셈
-
+     
 method 구글링👉
 click
 keydown
@@ -113,7 +113,7 @@ scroll
 
 // 🦄c9 Bootstrap 사용하기와 모달창 UI 개발
 /* 
-UI만들기 공식
+🚀UI만들기 공식
 1. HTML/CSS로 미리 디자인해놓기
 2. 평소엔 안보이게 숨기기
 3. 버튼을 눌렀을 때 보여주기  */
@@ -138,7 +138,7 @@ null
 undefined
 NaN */
 
-/* 🚀코딩 팁 : 먼저 한글로 알고리즘을 작성해보고, 그에 따라서 코딩함 */
+/* 🚀알고리즘 공식 : 먼저 한글로 알고리즘을 작성해보고, 그에 따라서 코딩함 */
 
 
 // 🦄c12 else if, and, or 조건문 (폼개발로 배우는 )
@@ -289,4 +289,33 @@ camelCase작명법
 '-'는 js에서 뺄셈을 의미해서 작명에  쓸수없음 */
 
 
+// 🦄c18 JS 애니메이션 만드는 공식/ 팁 (애니메이션 UI 2 : Slide Down 모달창 만들기 & 애니메이션 필수 팁)
 
+/* 
+🚀JS 애니메이션 만드는 공식
+
+1. 시작화면/ 최종화면 만들기
+
+2. 자바스크립트로 트리거를 주기
+
+3. 스무스한 동작 : css transition애니메이션 사용 
+
+(+  css class에 스타일링해서 classList로 붙이는 방식으로 개발하자 ) */
+
+/* 
+🚀애니메이션 팁
+1. js 말고 CSS transition을 쓰자 
+
+transition은 자바스크립트와 독립적으로 동작합니다. 
+
+편집도 훨씬 더 쉽습니다. 
+
+2. margin 말고 transform 속성을 쓰자 
+
+margin, width, height, top, left, bottom, right
+이런 CSS 속성들은 페이지 레이아웃을 변경하는 속성입니다.
+브라우저는 레이아웃을 변경하면 렌더링시간이 매우 오래걸립니다.
+
+transform, opacity
+이런 CSS 속성들은 페이지 레이아웃과 상관없는 쩌리 속성들입니다.
+브라우저는 쩌리 속성을 변경하는건 일도 아닙니다. 매우 빠르게 처리해줍니다. */
