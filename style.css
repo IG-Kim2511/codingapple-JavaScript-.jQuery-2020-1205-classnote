@@ -1,12 +1,10 @@
-body{
+body {
   max-width: 1000px;
 }
 
 .title {
   background-color: lightsteelblue;
 }
-
-
 
 /* 🦄c3  */
 
@@ -21,9 +19,8 @@ body{
 
 /* js 8, js 18 */
 
-.red{
+.red {
   background-color: red;
-  transition: all 1s;  /* c18 */
-  transform: scale(2); /* c18 */
-
+  transition: all 1s; /* c18 */
+  transform: scale(1.5) translateX(20px); /* c18 */
 }
