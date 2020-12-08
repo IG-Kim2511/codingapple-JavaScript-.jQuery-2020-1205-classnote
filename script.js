@@ -189,3 +189,33 @@ nodeValue() : input안의 내용물
 click 
 input : 글을 쓰고 있을때
 change : 글 다 쓰고 끝났을때 (빈칸이 글로 채워지면서 value가 바뀌었을때) */
+
+
+// 🦄c15 var let const 변수와 변수의 활용법
+
+/* ●
+declaration : 변수 선언
+Assignment : 변수 할당
+scope : 변수 범위
+
+●
+local variable
+global variable
+
+●
+closure : 
+function안에서 만든 변수, 밖에서 쓸 수 없음
+
+●var
+function(){ } 에서만 적용
+
+●let
+if(){ }, function(){ }...등등 모든 { }에서 적용 
+
+let 나이;  X (var 나이; 가능함)
+
+●const
+if(){ }, function(){ }...등등 모든 { }에서 적용 
+
+const 나이 = 33; X (let 나이 = 33; 다시 Assignment 가능)
+*/
