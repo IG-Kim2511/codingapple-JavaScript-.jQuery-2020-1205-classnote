@@ -56,8 +56,10 @@ body {
 
 /* 🦄c22 */
 
+/* css 22-2) */
 .slide-next {
   position: absolute;
   top: 45%;
-  right: 0;
+  right: 50%;
+  background-color: lightsalmon;
 }
