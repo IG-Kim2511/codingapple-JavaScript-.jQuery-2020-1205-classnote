@@ -9,6 +9,9 @@ body {
 .overflow {
   overflow: hidden;
 }
+.relative{
+  position: relative;
+}
 
 /* 🦄c3  */
 
@@ -49,4 +52,12 @@ body {
 
 .slide-box img {
   width: 20%; /* 🚀이미지 크기 박스에 맞춤 공식 : 100%가 기본 */
+}
+
+/* 🦄c22 */
+
+.slide-next {
+  position: absolute;
+  top: 45%;
+  right: 0;
 }

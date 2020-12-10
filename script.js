@@ -415,3 +415,71 @@ document.querySelector('.slide-3').addEventListener('click',function(){
 document.querySelector('.slide-1').addEventListener('click',function(){
   document.querySelector('.slide-container').style.transform = "translateX(0)";
 });
+
+// 🦄c22 슬라이드 만들기 2 : Next 버튼 만들기
+
+
+
+
+/* 
+Next 버튼을 누르면..
+만약에 지금 사진1을 보고있으면 사진2를 보여주시고 
+만약에 지금 사진2를 보고있으면 사진3을 보여주세요..
+
+$('.slide-next').click(function() {
+
+  if (지금보이는 사진이 1 이면) {
+    $('.slide-container').css('transform', 'translateX(-100vw)');
+  } else if (지금보이는 사진이 2 면) {
+    $('.slide-container').css('transform', 'translateX(-200vw)');
+  }
+
+});
+
+var 지금보이는사진 = 1;
+
+
+$('.slide-next').click(function() {
+
+  if ( 지금보이는사진 == 1 ) {
+    $('.slide-container').css('transform', 'translateX(-100vw)');
+    지금보이는사진 = 2;  (← 이거추가)
+  } else if ( 지금보이는사진 == 2 ) {
+    $('.slide-container').css('transform', 'translateX(-200vw)');
+    지금보이는사진 = 3;  (← 이거추가)
+  }
+
+});
+
+
+var age = 20;
+console.log( '저는' + age + '살 입니다');
+
+
+$('.slide-next').click(function() {
+
+  $('.slide-container').css('transform', 'translateX(-' + 지금보이는사진 + '00vw)');
+  지금보이는사진 = 지금보이는사진 + 1;
+
+});
+
+
+$('.slide-next').click(function() {
+
+  $('.slide-container').css('transform', 'translateX(-' + 지금보이는사진 + '00vw)');
+  if ( 지금보이는사진 < 3 ) { 
+      지금보이는사진 = 지금보이는사진 + 1;
+  }
+}); */
+
+
+
+/* 
+
+$(Before버튼).click(function() {
+
+  $('.slide-container').css('transform', 'translateX(-' + (지금보이는사진 - 2) + '00vw)');
+  if ( 지금보이는사진 > 1 ) { 
+      지금보이는사진 = 지금보이는사진 - 1;
+  }
+}); */
