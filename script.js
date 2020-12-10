@@ -389,17 +389,25 @@ html에서의<input type="text">
 예전 브라우저를 위한 코딩.... */
 
 // 1) 패스워드에 대문자가 있는지 검사하기
-var 입력한패스워드 = document.querySelector('#psw').nodeValue();
-
-if ( /[A-Z]+/.test(입력한패스워드) == false ){
-  e.preventDefault();
-}
 
 // 2) 이메일 형식 검사와 공백검사를 동시에?
-var 입력한이메일 = document.querySelector('#email').nodeValue();
 
-if ( /\S+@\S+\.\S+/.test(입력한이메일) == false ){
-   e.preventDefault();
-} else if ( 입력한이메일 == '' ) {
-  e.preventDefault();
-}
+
+// 🦄c21 슬라이드 만들기 1: UI와 버튼기능
+
+/* 
+ js 21-2) 큰 박스(.slide-container)를 옆으로 움직임
+ 
+ .style.transform = "translateX(-100vw)"*/
+
+document.querySelector('.slide-2').addEventListener('click',function(){
+  document.querySelector('.slide-container').style.transform = "translateX(-100vw)";
+});
+
+document.querySelector('.slide-3').addEventListener('click',function(){
+  document.querySelector('.slide-container').style.transform = "translateX(-200vw)";
+});
+
+document.querySelector('.slide-1').addEventListener('click',function(){
+  document.querySelector('.slide-container').style.transform = "translateX(0)";
+});

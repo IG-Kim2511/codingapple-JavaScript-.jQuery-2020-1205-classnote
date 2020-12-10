@@ -6,6 +6,10 @@ body {
   background-color: lightsteelblue;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 /* 🦄c3  */
 
 .alert-box {
@@ -23,4 +27,26 @@ body {
   background-color: red;
   transition: all 1s; /* c18 */
   transform: scale(1.5) translateX(20px); /* c18 */
+}
+
+/* js 21 */
+
+.slide-container {
+  width: 300vw; /* 1) 300vw에 100vw x3개 박스 넣음 */
+
+  /* 버그: 페이지 줄이고 늘릴때, float속성 정렬이 이상해짐
+  transition: all; 👉 transform 으로 정확하게 지정하기 */
+  transition: transform 1s;
+
+  /* js 21-2) js로 추가 👉 transform : translateX(-100vw); */
+}
+
+.slide-box {
+  /* vw : 현재 브라우저 화면폭(viewport widt)의 몇%를 차지할것이냐라는 단위 */
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 20%; /* 🚀이미지 크기 박스에 맞춤 공식 : 100%가 기본 */
 }
