@@ -96,9 +96,13 @@ document.getElementById('title6_2') */
 
 
 // 🦄c8 addEventListener (이벤트 리스너)
+
 document.querySelector('.btn8').addEventListener('click',()=>{
   document.querySelector('.btn8').classList.toggle("red");
   });
+  
+/* = 같은뜻 jquery로...
+$('.btn8').on('click',function(){ }) */
 
 /* 
 html에 집어넣는 JS는 이제 그만, script 에서 모든 기능 개발
