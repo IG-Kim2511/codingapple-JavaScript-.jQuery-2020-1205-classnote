@@ -333,7 +333,8 @@ transform, opacity
 */
 
 /* 
-그럼 abcdef라는 문자에 abc라는 단어가 있는지 검사해보도록 합시다. 
+그럼 abcdef라는 문자에 abc라는 단어가 포함되어있는건지 검사하는것임.
+(동일한건지 검사 x) 
 
 /abc/.test('abcdef')
  */
@@ -351,7 +352,7 @@ console.log(result); // true
 
 /[A-D]/
 /[가-하]/
-대괄호와 대쉬 기호를 사용하시면 A부터 D까지의 글자가 있는지 물어보실 수 있습니다. 한글도 가능합니다. 
+[ ] , - 기호 : A부터 D까지의 글자가 포함되어있는지 확인. 한글도 가능합니다. 
 
 /\S/
 역슬래시(또는 원화기호)와 S라는 글자를 붙여주시면 모든 문자를 뜻합니다. (특수기호 포함)
@@ -379,3 +380,26 @@ console.log(result); // true
 
 문법을 쓰는게 아니라 진짜 마침표를 찾아달라라는 의미로 쓰려면 역슬래시를 앞에 붙이셔야합니다. (escape기호)*/
 
+
+// 🦄c20 Regular expressions 2 (정규식 숙제 : 비밀번호 검증하기)
+
+/* 
+html에서의<input type="text">
+요즘 브라우저에서는 자동으로 검사해줌. regular expression쓸필요없음.
+예전 브라우저를 위한 코딩.... */
+
+// 1) 패스워드에 대문자가 있는지 검사하기
+var 입력한패스워드 = document.querySelector('#psw').nodeValue();
+
+if ( /[A-Z]+/.test(입력한패스워드) == false ){
+  e.preventDefault();
+}
+
+// 2) 이메일 형식 검사와 공백검사를 동시에?
+var 입력한이메일 = document.querySelector('#email').nodeValue();
+
+if ( /\S+@\S+\.\S+/.test(입력한이메일) == false ){
+   e.preventDefault();
+} else if ( 입력한이메일 == '' ) {
+  e.preventDefault();
+}
