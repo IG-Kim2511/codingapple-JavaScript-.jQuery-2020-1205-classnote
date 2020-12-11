@@ -423,56 +423,55 @@ document.querySelector('.slide-3').addEventListener('click',function(){
 /* 
 js 22-3) 한글로 먼저 표현 후, 코딩
 
+3-1) 알고리즘
 Next 버튼을 클릭하면..
 만약에 지금 사진1을 보고있으면, 사진2를 보여주고  
-(3이하일때만 (총 사진갯수3개)) (+지금보이는 사진을 2로 바꿈)
 
-만약에 지금 사진2를 보고있으면, 사진3을 보여주기..
-(3이하일때만 (총 사진갯수3개)) (+지금보이는 사진을 3으로 바꿈)
- */
-
-
-/* 
+3-4)
+3이하일때만 지금보이는사진을 2로 바꿈(총 사진갯수3개)
+ 
+3-2)
 지금 보이는 사진이 1이란걸 어떻게 표현할 수 있죠?
 지금 몇번째 사진 보고있는지 저장용.
 default값 1 
+
+3-3)
+만약에 지금 사진2를 보고있으면, 사진3을 보여주기..
+(3이하일때만 (총 사진갯수3개)) (+지금보이는 사진을 3으로 바꿈)
 */
+
+// 3-2)
 var 지금보이는사진 = 1;
 
 var slideNext = document.querySelector('.slide-next');
 var slideContainer = document.querySelector('.slide-container');
 
+slideNext.addEventListener('click',function(){
+
+  if(지금보이는사진 == 1){   /* 3-1) */ /* 3-3) */
+    slideContainer.style.transform = `translateX(-${지금보이는사진}00vw)`;
+    
+    if ( 지금보이는사진 < 3 ) {  /* 3-4)*/
+      지금보이는사진 = 지금보이는사진 + 1;}    
+  }
+
+  else if( 지금보이는사진 == 2){
+    slideContainer.style.transform = `translateX(-${지금보이는사진}00vw)`;
+   
+    if ( 지금보이는사진 < 3 ) { 
+      지금보이는사진 = 지금보이는사진 + 1;}
+  }
+});
+
 /* 하드코딩
 slideNext.addEventListener('click',function(){
   if(지금보이는사진 == 1){
     slideContainer.style.transform = "translateX(-100vw)";
-    지금보이는사진 = 2; 
-    
+    지금보이는사진 = 2;     
   } else if( 지금보이는사진 == 2){
     slideContainer.style.transform = "translateX(-200vw)";   
     지금보이는사진 = 3;   
   }
 });
 */
-
-slideNext.addEventListener('click',function(){
-
-  if(지금보이는사진 == 1){
-    // slideContainer.style.transform = "translateX(-100vw)";
-    slideContainer.style.transform = `translateX(-${지금보이는사진}00vw)`;
-    // 지금보이는사진 = 2; 
-    if ( 지금보이는사진 < 3 ) { 
-      지금보이는사진 = 지금보이는사진 + 1;
-  }
-    
-  } else if( 지금보이는사진 == 2){
-    // slideContainer.style.transform = "translateX(-200vw)";
-    slideContainer.style.transform = `translateX(-${지금보이는사진}00vw)`;
-    // 지금보이는사진 = 3; 
-    if ( 지금보이는사진 < 3 ) { 
-      지금보이는사진 = 지금보이는사진 + 1;
-  }
-  }
-});
-
 
