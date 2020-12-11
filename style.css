@@ -67,13 +67,28 @@ body {
 /*🦄c24*/
 .nav-menu {  
 
-  /* js 1) */
+  /* js 24-1) */
   background : lightblue;
   color : lightcoral;
 }
 
- /* js 1) */
+ /* js 24-1) */
 .nav-black{
   background : lightyellow;
   color : black;
+}
+
+/* 🦄c25 */
+.large-logo {
+  font-size : 40px;
+  margin: 0;
+}
+
+.small-logo {
+  font-size : 20px;
+}
+
+/* js 25-2) */
+.nav-menu h4 {
+  transition : all 0.5s;
 }

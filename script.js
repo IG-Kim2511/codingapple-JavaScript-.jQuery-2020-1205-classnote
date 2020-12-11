@@ -491,11 +491,31 @@ scrollY
   만약에 지금 위에서부터 1200px 이상 스크롤했을 때
  */
 
-window.addEventListener('scroll',function(){  /* 1) 2) */
+ 
+//🦄c25 스크롤을 다시 올리면 원래대로 (스크롤 애니메이션 2: 숙제)
+/*  
+1) scroll eventLister는  하나만 쓰세요. 
+1초에 최대 60번 실행시키기 때문에, 실행횟수가 많아 브라우저가 간혹 느려짐
+scroll 이벤트 리스너와 내부의 코드는 최대한 줄여서 사용하는게 좋습니다.
+*/
 
-  if(window.scrollY>1200){  /* 4) */
+/* 2) 스크롤시 로고 폰트사이즈가 서서히 작아지게 만들어보세요!
+classList.add */
+
+/* 3) 스크롤을 다시 올리면 원래대로
+classList.remove
+*/
+
+
+window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
+
+  if(window.scrollY > 1200){  /* 24-4) */
     console.log(scrollY)
-    document.querySelector('.nav-menu').classList.toggle("nav-black"); /* 3) */
+    document.querySelector('.nav-menu').classList.add("nav-black"); /* 24-3) */
+    document.querySelector('.nav-menu h4').classList.add("small-logo"); /* 25-2) */  
+  } else{   /* 25-3) */  
+    document.querySelector('.nav-menu').classList.remove("nav-black"); 
+    document.querySelector('.nav-menu h4').classList.remove("small-logo");    
   }
 });
 
