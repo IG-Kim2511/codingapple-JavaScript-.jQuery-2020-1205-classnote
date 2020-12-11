@@ -94,7 +94,6 @@ document.querySelector('#title6_2')
 document.getElementById('title6_2') */
 
 
-
 // 🦄c8 addEventListener (이벤트 리스너)
 
 document.querySelector('.btn8').addEventListener('click',()=>{
@@ -417,7 +416,6 @@ document.querySelector('.slide-3').addEventListener('click',function(){
 });
 
 
-
 // 🦄c22 슬라이드 만들기 2 : Next 버튼 만들기
 
 /* 
@@ -448,7 +446,7 @@ var slideContainer = document.querySelector('.slide-container');
 
 slideNext.addEventListener('click',function(){
 
-  if(지금보이는사진 == 1){   /* 3-1) */ /* 3-3) */
+  if(지금보이는사진 == 1){   /* 3-1) 3-3) */
     slideContainer.style.transform = `translateX(-${지금보이는사진}00vw)`;
     
     if ( 지금보이는사진 < 3 ) {  /* 3-4)*/
@@ -474,4 +472,30 @@ slideNext.addEventListener('click',function(){
   }
 });
 */
+
+
+// 🦄c24 scroll, scrollY (스크롤 애니메이션 1: 스크롤시 변하는 Navbar 만들기)
+
+/* 
+1) js 문법:  window.
+window 라는건 viewport 입니다. (지금 보이는 브라우저 화면을 뜻함)
+
+2)'scroll'
+
+3) classList.add
+
+4)
+scrollY
+왼쪽에 있는 요소(window)가 위에서부터 몇 px 스크롤 되었는지 알려줍니다. 
+ window라고 썼으니 viewport가 몇 px 스크롤되었는지 알려주겠죠?
+  만약에 지금 위에서부터 1200px 이상 스크롤했을 때
+ */
+
+window.addEventListener('scroll',function(){  /* 1) 2) */
+
+  if(window.scrollY>1200){  /* 4) */
+    console.log(scrollY)
+    document.querySelector('.nav-menu').classList.toggle("nav-black"); /* 3) */
+  }
+});
 

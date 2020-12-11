@@ -63,3 +63,17 @@ body {
   right: 50%;
   background-color: lightsalmon;
 }
+
+/*🦄c24*/
+.nav-menu {  
+
+  /* js 1) */
+  background : lightblue;
+  color : lightcoral;
+}
+
+ /* js 1) */
+.nav-black{
+  background : lightyellow;
+  color : black;
+}
