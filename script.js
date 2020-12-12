@@ -329,7 +329,7 @@ transform, opacity
 매우 빠르게 처리해줍니다. */
 
 
-// 🦄c19 Regular expressions (정규식으로 이메일 형식 검증해보기)
+// 🦄c19 Regular expressions (정규표현식으로 이메일 형식 검증해보기)
 
 /* 
 어떤 문자에 ‘abc’라는 단어가 들어가있나요? 라고 물어보고 싶을 때 쓰시면 됩니다. 
@@ -386,6 +386,22 @@ console.log(result); // true
 \. 이라는 기호는 왜 이렇게 썼냐면 마침표는 정규식에서 특수한 문법이기 때문에 
 
 문법을 쓰는게 아니라 진짜 마침표를 찾아달라라는 의미로 쓰려면 역슬래시를 앞에 붙이셔야합니다. (escape기호)*/
+
+/* 
+자주 사용되는 정규 표현식
+
+/^[0-9]*$/	숫자로만 되어 있는지 검사
+/^[a-zA-Z]*$/	알파벳으로만 되어 있는지 검사
+/^[ㄱ-ㅎ가-힣]*$/	한글로만 되어 있는지 검사
+/^[a-zA-Z0-9]*$/	알파벳과 숫자로만 되어 있는지 검사
+/^[ㄱ-ㅎ가-힣0-9]*$/	한글과 숫자로만 되어 있는지 검사
+/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i	이메일 형식 검사
+/^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/	핸드폰 번호 형식검사
+/^\d{2,3}\d{3,4}\d{4}$/	집 전화 형식 검사
+/^\d{6}[1-4]\d{6}/	주민번호 형식 검사
+*/
+
+
 
 
 // 🦄c20 Regular expressions 2 (정규식 숙제 : 비밀번호 검증하기)
@@ -615,3 +631,77 @@ for (let i = 0; i < tabBtn.length; i++) {
   tabContent[i].classList.add('show');  
   });
 }
+
+
+// 🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault e.stopPropagation
+
+
+/* 
+이벤트 버블링
+어떤 HTML 태그에 이벤트(ex: click)가 발생하면 그의 모든 상위요소까지 이벤트(ex: click)가 실행되는 현상 
+
+
+*/
+/* 
+
+$('.black-background').click(function(){
+  $('.black-background').hide()
+});
+
+
+
+
+
+
+$('.black-background').click(function(e){
+  e.target;
+  e.currentTarget;
+  e.preventDefault();
+  e.stopPropagation();
+});
+
+
+
+ 파라미터 이름은 아무렇게나 하시면 됩니다. (보통 e 혹은 event라고 많이들 작명합니다)
+
+e.target은 지금 실제 클릭한 요소
+
+e.currentTarget은 지금 이벤트리스너가 달린 곳 (참고로 this라고 쓰셔도 같은 의미입니다.)
+
+e.preventDefault()는 기본 동작을 막을 때 쓰고 
+
+e.stopPropagation()은 내 상위요소로의 이벤트 버블링을 중단할 때 씁니다. 
+
+여기서 중요한건 e.target입니다.
+
+브라우저는 바보처럼 버블링이 일어난다고 해도 그래도 사용자가 실제로 클릭한 그 요소는 찾아낼 수 있습니다. 
+
+
+
+
+
+
+$('.black-background').click(function(){
+  음 지금 실제로 누른게 검은 배경일 때만 $('.black-background').hide() 해주셈 
+});
+
+
+
+
+$('.black-background').click(function(){
+  if ( e.target == e.currentTarget ){
+    $('.black-background').hide()
+  }
+});
+
+ e.target == this 라고 비교하셔도 됩니다. 
+
+
+ e.target == $(‘.black-background’)
+  작동하진 않습니다. 
+e.target은 쌩 자바스크립트 
+$(‘.black-background’)는 jQuery 
+
+같이 쓸 수 없음
+
+*/
