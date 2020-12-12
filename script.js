@@ -636,72 +636,65 @@ for (let i = 0; i < tabBtn.length; i++) {
 // 🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault e.stopPropagation
 
 
-/* 
+/* 2)
 이벤트 버블링
 어떤 HTML 태그에 이벤트(ex: click)가 발생하면 그의 모든 상위요소까지 이벤트(ex: click)가 실행되는 현상 
 
+무언가 클릭한 때,  1번만 클릭한것이 아님
+하위태그 클릭하면, 상위 모든 태그도 클릭한것으로 보고됨 (태그 3개일때, 총 3번 클릭)
+*/
+
+
+/* 2-2)
+q: black-background배경을 누를때만 창이 닫히는 기능
+
+버그 : black-background 안의 다른 태그 눌러도 이벤트 발생함
+input을 눌러도 
+.white~ 눌러도 
+상위태그인.black-background 클릭한 것으로 보고됨.
+black-background 클릭한걸로알고 창을 닫는 버그
+*/
+
+var bbg = document.querySelector('.black-background');
+
+bbg.addEventListener('click',function(){
+  bbg.style.display = 'none';
+});
+
+
+
+/* 
+3) 한글로 알고리즘 먼저 작성 : 지금 실제로 누른게 검은 배경일 때만 display = 'none';해주셈
+
+4) 이벤트함수: 이벤트리스너 콜백함수안에 파라미터(e)를 추가하면 이벤트관련 함수들 사용 가능해짐
+
+~~~~~.~~~~((e)=>{
+
+e.target; : 지금 실제 클릭한 요소
+
+e.currentTarget; (=this): 지금 이벤트리스너가 달린 곳 
+
+e.preventDefault(); : 기본 동작을 막을 때 쓰고 
+
+e.stopPropagation(); : 내 상위요소로의 이벤트 버블링을 중단할 때 씁니다. 
+
+});
 
 */
-/* 
 
-$('.black-background').click(function(){
-  $('.black-background').hide()
+var bbg2 = document.querySelector('.black-background2');
+
+bbg2.addEventListener('click',function(e){
+
+  if(e.target == e.currentTarget){  /* 4) */
+
+    /* if(e.target == this) */  /* 4) */
+    bbg2.style.display = 'none';
+  } 
+
 });
 
-
-
-
-
-
-$('.black-background').click(function(e){
-  e.target;
-  e.currentTarget;
-  e.preventDefault();
-  e.stopPropagation();
-});
-
-
-
- 파라미터 이름은 아무렇게나 하시면 됩니다. (보통 e 혹은 event라고 많이들 작명합니다)
-
-e.target은 지금 실제 클릭한 요소
-
-e.currentTarget은 지금 이벤트리스너가 달린 곳 (참고로 this라고 쓰셔도 같은 의미입니다.)
-
-e.preventDefault()는 기본 동작을 막을 때 쓰고 
-
-e.stopPropagation()은 내 상위요소로의 이벤트 버블링을 중단할 때 씁니다. 
-
-여기서 중요한건 e.target입니다.
-
-브라우저는 바보처럼 버블링이 일어난다고 해도 그래도 사용자가 실제로 클릭한 그 요소는 찾아낼 수 있습니다. 
-
-
-
-
-
-
-$('.black-background').click(function(){
-  음 지금 실제로 누른게 검은 배경일 때만 $('.black-background').hide() 해주셈 
-});
-
-
-
-
-$('.black-background').click(function(){
-  if ( e.target == e.currentTarget ){
-    $('.black-background').hide()
-  }
-});
-
- e.target == this 라고 비교하셔도 됩니다. 
-
-
- e.target == $(‘.black-background’)
-  작동하진 않습니다. 
-e.target은 쌩 자바스크립트 
-$(‘.black-background’)는 jQuery 
-
-같이 쓸 수 없음
-
+/* 5)
+ e.target == $(‘.black-background’) 작동하진 않습니다. 
+바닐라 자바스크립트 & jQuery는 같이 쓸 수 없음
 */

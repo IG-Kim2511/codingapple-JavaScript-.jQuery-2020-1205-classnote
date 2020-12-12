@@ -131,3 +131,20 @@ padding: 10px;
 .show {
 display: block;
 }
+
+
+/* 🦄c28  */
+
+.black-background{
+  background-color: grey;
+  display: block;
+  width: 20rem;
+  height: 10rem;
+}
+
+.black-background2{
+  background-color: grey;
+  display: block;
+  width: 20rem;
+  height: 10rem;
+}
