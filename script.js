@@ -520,7 +520,7 @@ window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
   }
 });
 
-// 🦄c26 탭기능 만들기 1
+// 🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기 1)
 /* 
 Q: 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
 
@@ -537,6 +537,14 @@ Q: 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
 1)  모든 active show 클래스 제거
 
 2) 버튼에 css로 색넣기 👉 active라는 클래스를 추가
+
+2-2)
+querySelector는 코드 전체를 찾고, 그 중에서 첫번째 것만 알려 준다.
+
+querySelectorAll은 코드 전체를 찾고, 이를 배열 형태로 나열 시킨다. 
+
+querySelectorAll('.클래스이름')[1] : 전체클래스에서 1번째 선택
+
 
 3) 내용에 해당탭 보여줌 👉 show라는 클래스를 추가
 */

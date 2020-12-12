@@ -117,7 +117,7 @@ text-decoration: none;
 cursor: pointer;
 }
 
-/* 2) */
+/* 26-2) */
 .active {
 border: 3px solid orange;
 }
@@ -127,7 +127,7 @@ display: none;
 padding: 10px;
 }
 
-/* 3) */
+/* 26-3) */
 .show {
 display: block;
 }
