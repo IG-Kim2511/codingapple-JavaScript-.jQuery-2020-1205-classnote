@@ -521,3 +521,36 @@ window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
 });
 
 // 🦄c26 탭기능 만들기 1
+/* 
+Q: 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
+
+알고리즘)
+  둘째 버튼을 누르면 
+  0. 모든 버튼에 있는 active 클래스 제거
+  0. 모든 내용에 있는 show 클래스 제거
+
+  1. 둘째 버튼에 active라는 클래스를 추가해야함 (버튼 누른듯한 하이라이트 해주려고)
+  2. 둘째 내용에 show라는 클래스를 추가해야함 (탭내용 보여주려고)
+*/
+
+/* 
+1)  모든 active show 클래스 제거
+
+2) 버튼에 css로 색넣기 👉 active라는 클래스를 추가
+
+3) 내용에 해당탭 보여줌 👉 show라는 클래스를 추가
+*/
+
+var tabBtn = document.querySelectorAll('.tab-button');
+var tabContent = document.querySelectorAll('.tab-content');
+
+tabBtn[1].addEventListener('click',function(){
+
+document.querySelector('.tab-button').classList.remove('active'); /* 26-1 */
+document.querySelector('.tab-content').classList.remove('show'); /* 26-1 */
+
+tabBtn[1].classList.add('active');  /* 26-2 */
+tabContent[1].classList.add('show');  /* 26-3 */
+});
+
+

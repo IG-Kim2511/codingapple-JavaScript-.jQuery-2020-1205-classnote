@@ -92,3 +92,42 @@ body {
 .nav-menu h4 {
   transition : all 0.5s;
 }
+
+/* 🦄c26 */
+ul.list {
+list-style-type: none;
+margin: 0;
+padding: 0;
+border-bottom: 1px solid #ccc;
+}
+
+ul.list::after {
+content: '';
+display: block;
+clear: both;
+}
+
+.tab-button {
+display: block;
+padding: 10px 20px 10px 20px;
+float: left;
+margin-right: -1px;
+margin-bottom: -1px;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* 2) */
+.active {
+border: 3px solid orange;
+}
+
+.tab-content {
+display: none;
+padding: 10px;
+}
+
+/* 3) */
+.show {
+display: block;
+}
