@@ -561,33 +561,47 @@ tabBtn[1].classList.add('active');  /* 26-2 */
 tabContent[1].classList.add('show');  /* 26-3 */
 });
 
-// 🦄c27 탭기능 만들기 2
 
-for (var i = 0; i < 3; i++) {
+// 🦄c27 for반복문. (탭기능 만들기 2)
+
+/* 
+1) for 반복문
+var i = 0은 초기값, 
+i < 3은 반복문이 실행되는 조건,
+i++는 반복문이 돌 때마다 i라는 변수에다가 1을 더해주세요~
+
+2) for 반복문에서 var 쓰지말고, let을 쓰자.
+let이라는 변수를 쓰기만 하면 버그가 전혀 없으니, 이해안되도 그냥 let쓰면됨 
+*/
+for (let i = 0; i < 3; i++) {
   console.log('안녕');
 }
 
+/* 소프트코딩 (26강 내용) ???? 
+querySelectorAll 모두를 지정할 수 있는 방법은???? --에러*/
 
+for (let i = 0; i < tabBtn.length; i++) {
+  tabBtn[i].addEventListener('click',function(){
 
-/* 
-for (let i = 0; i < 3; i++) {
-  $('.tab-button').eq(i).click(function(){ 
-    $('.tab-button').removeClass('active'); 
-    $('.tab-content').removeClass('show'); 
-    $('.tab-button').eq(i).addClass('active'); 
-    $('.tab-content').eq(i).addClass('show'); 
+  tabBtn[i].classList.remove('active'); /* 에러 */
+  tabContent[i].classList.remove('show');  /* 에러 */
+  
+  tabBtn[i].classList.add('active');  
+  tabContent[i].classList.add('show');  
   });
-
 }
 
-
+/* 
+제이쿼리 코딩
 for (let i = 0; i < $('.tab-button').length;  i++) {
+
   $('.tab-button').eq(i).click(function(){ 
+
     $('.tab-button').removeClass('active'); 
     $('.tab-content').removeClass('show'); 
+
     $('.tab-button').eq(i).addClass('active'); 
     $('.tab-content').eq(i).addClass('show'); 
   });
-
 } 
 */
