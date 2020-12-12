@@ -577,8 +577,8 @@ for (let i = 0; i < 3; i++) {
   console.log('안녕');
 }
 
-/* 소프트코딩 (26강 내용) ???? 
-querySelectorAll 모두를 지정할 수 있는 방법은???? --에러*/
+/* 소프트코딩 (26강 내용) 
+???? :querySelectorAll 모두를 지정할 수 있는 방법은? --에러*/
 
 for (let i = 0; i < tabBtn.length; i++) {
   tabBtn[i].addEventListener('click',function(){
