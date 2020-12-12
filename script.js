@@ -635,7 +635,6 @@ for (let i = 0; i < tabBtn.length; i++) {
 
 // 🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault e.stopPropagation
 
-
 /* 2)
 이벤트 버블링
 어떤 HTML 태그에 이벤트(ex: click)가 발생하면 그의 모든 상위요소까지 이벤트(ex: click)가 실행되는 현상 
@@ -643,7 +642,6 @@ for (let i = 0; i < tabBtn.length; i++) {
 무언가 클릭한 때,  1번만 클릭한것이 아님
 하위태그 클릭하면, 상위 모든 태그도 클릭한것으로 보고됨 (태그 3개일때, 총 3번 클릭)
 */
-
 
 /* 2-2)
 q: black-background배경을 누를때만 창이 닫히는 기능
@@ -660,7 +658,6 @@ var bbg = document.querySelector('.black-background');
 bbg.addEventListener('click',function(){
   bbg.style.display = 'none';
 });
-
 
 
 /* 
@@ -691,10 +688,26 @@ bbg2.addEventListener('click',function(e){
     /* if(e.target == this) */  /* 4) */
     bbg2.style.display = 'none';
   } 
-
 });
 
 /* 5)
  e.target == $(‘.black-background’) 작동하진 않습니다. 
 바닐라 자바스크립트 & jQuery는 같이 쓸 수 없음
+*/
+
+/* 
+🦄c28-2 addEventListener 자주 쓰이는 이벤트 목록
+ 
+change	변동이 있을 때 발생 
+click	클릭 시 발생
+focus	포커스를 얻었을 때 발생
+keydown	키를 눌렀을 때 발생 
+keyup	키에서 손을 땟을 때 발생 
+load	로드가 완료 되었을 때 발생 
+mousedown	마우스를 클릭 했을 때 발생
+mouseout	마우스가 특정 객체 밖으로 나갔을 때 발생
+mouseover	마우스가 특정 객체 위로 올려졌을 때 발생
+mousemove	마우스가 움직였을 때 발생
+mouseup	마우스에서 손을 땟을 때 발생
+select	option 태그 등에서 선택을 햇을 때 발생
 */
