@@ -561,4 +561,33 @@ tabBtn[1].classList.add('active');  /* 26-2 */
 tabContent[1].classList.add('show');  /* 26-3 */
 });
 
+// 🦄c27 탭기능 만들기 2
 
+for (var i = 0; i < 3; i++) {
+  console.log('안녕');
+}
+
+
+
+/* 
+for (let i = 0; i < 3; i++) {
+  $('.tab-button').eq(i).click(function(){ 
+    $('.tab-button').removeClass('active'); 
+    $('.tab-content').removeClass('show'); 
+    $('.tab-button').eq(i).addClass('active'); 
+    $('.tab-content').eq(i).addClass('show'); 
+  });
+
+}
+
+
+for (let i = 0; i < $('.tab-button').length;  i++) {
+  $('.tab-button').eq(i).click(function(){ 
+    $('.tab-button').removeClass('active'); 
+    $('.tab-content').removeClass('show'); 
+    $('.tab-button').eq(i).addClass('active'); 
+    $('.tab-content').eq(i).addClass('show'); 
+  });
+
+} 
+*/
