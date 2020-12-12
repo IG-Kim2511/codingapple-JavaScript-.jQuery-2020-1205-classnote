@@ -522,15 +522,15 @@ window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
 
 // 🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기 1)
 /* 
-Q: 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
+Q: 1번 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
 
 알고리즘)
-  둘째 버튼을 누르면 
+  1번 버튼을 누르면 
   0. 모든 버튼에 있는 active 클래스 제거
   0. 모든 내용에 있는 show 클래스 제거
 
-  1. 둘째 버튼에 active라는 클래스를 추가해야함 (버튼 누른듯한 하이라이트 해주려고)
-  2. 둘째 내용에 show라는 클래스를 추가해야함 (탭내용 보여주려고)
+  1. 1번 버튼에 active라는 클래스를 추가해야함 (버튼 누른듯한 하이라이트 해주려고)
+  2. 1번 내용에 show라는 클래스를 추가해야함 (탭내용 보여주려고)
 */
 
 /* 
@@ -549,20 +549,39 @@ querySelectorAll('.클래스이름')[1] : 전체클래스에서 1번째 선택
 3) 내용에 해당탭 보여줌 👉 show라는 클래스를 추가
 */
 
+/* 4)
+???? :querySelectorAll 모두를 지정할 수 있는 방법은? --에러
+
+A: 한번에 여러개 싸잡아서 바꾸는건 jQuery만 가능한것이고
+쌩자바스크립트 사용시엔 이렇게 하나씩 써야합니다 다른 방법은 없습니다 
+
+document.querySelectorAll(‘.tab-button’)[0].classList.remove(‘active’);
+document.querySelectorAll(‘.tab-button’)[1].classList.remove(‘active’);
+document.querySelectorAll(‘.tab-button’)[2].classList.remove(‘active’);
+
+jQery : 
+$('.tab-button').removeClass('active'); 
+ */
+
 var tabBtn = document.querySelectorAll('.tab-button');
 var tabContent = document.querySelectorAll('.tab-content');
 
 tabBtn[1].addEventListener('click',function(){
 
-document.querySelector('.tab-button').classList.remove('active'); /* 26-1 */
-document.querySelector('.tab-content').classList.remove('show'); /* 26-1 */
-
+  // 4)
+  tabBtn[0].classList.remove('active'); 
+  tabBtn[1].classList.remove('active'); 
+  tabBtn[2].classList.remove('active'); 
+  tabContent[0].classList.remove('show');  
+  tabContent[1].classList.remove('show');  
+  tabContent[2].classList.remove('show');  
+  
 tabBtn[1].classList.add('active');  /* 26-2 */
 tabContent[1].classList.add('show');  /* 26-3 */
 });
 
 
-// 🦄c27 for반복문. (탭기능 만들기 2)
+// 🦄c27 for반복문. (탭기능 만들기 2: 모든 버튼 구현)
 
 /* 
 1) for 반복문
@@ -577,31 +596,22 @@ for (let i = 0; i < 3; i++) {
   console.log('안녕');
 }
 
-/* 소프트코딩 (26강 내용) 
-???? :querySelectorAll 모두를 지정할 수 있는 방법은? --에러*/
+/* 
+3) 소프트코딩 
+모든 버튼 기능 구현
+*/
 
 for (let i = 0; i < tabBtn.length; i++) {
   tabBtn[i].addEventListener('click',function(){
 
-  tabBtn[i].classList.remove('active'); /* 에러 */
-  tabContent[i].classList.remove('show');  /* 에러 */
+  tabBtn[0].classList.remove('active'); 
+  tabBtn[1].classList.remove('active'); 
+  tabBtn[2].classList.remove('active'); 
+  tabContent[0].classList.remove('show');  
+  tabContent[1].classList.remove('show');  
+  tabContent[2].classList.remove('show');  
   
   tabBtn[i].classList.add('active');  
   tabContent[i].classList.add('show');  
   });
 }
-
-/* 
-제이쿼리 코딩
-for (let i = 0; i < $('.tab-button').length;  i++) {
-
-  $('.tab-button').eq(i).click(function(){ 
-
-    $('.tab-button').removeClass('active'); 
-    $('.tab-content').removeClass('show'); 
-
-    $('.tab-button').eq(i).addClass('active'); 
-    $('.tab-content').eq(i).addClass('show'); 
-  });
-} 
-*/
