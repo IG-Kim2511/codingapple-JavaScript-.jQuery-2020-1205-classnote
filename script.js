@@ -719,7 +719,7 @@ select	option 태그 등에서 선택을 햇을 때 발생
 
 1-1) primitives Data Types :
 
-undefined 
+undefined  
 
 Boolean
 Number 
