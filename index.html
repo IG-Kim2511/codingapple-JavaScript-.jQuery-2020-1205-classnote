@@ -11,8 +11,11 @@
     <script src="script.js" defer></script>
 
     <!--c7) jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section class="c2">
@@ -113,11 +116,10 @@
       <input type="password" id="psw" placeholder="password" />
     </section>
 
-
     <section class="21 22">
       <p class="title">🦄c21 슬라이드 만들기 1: UI와 버튼기능</p>
       <p class="title">🦄c22 슬라이드 만들기 2 : Next 버튼 만들기</p>
-      <p class="title">🦄c23 자바스크립트 라이브러리 소개&사용법 </p>  
+      <p class="title">🦄c23 자바스크립트 라이브러리 소개&사용법</p>
 
       <div class="overflow relative">
         <!-- js 21-2) -->
@@ -140,28 +142,37 @@
 
       <button class="slide-1">1</button>
       <button class="slide-2">2</button>
-      <button class="slide-3">3</button>      
+      <button class="slide-3">3</button>
     </section>
 
-    <section class="c24" style="height:500px">
-      <p class="title">🦄c24 scroll, scrollY (스크롤 애니메이션 1: 스크롤시 변하는 Navbar 만들기)</p>
-      <p class="title">🦄c25 scroll,classList.remove 스크롤을 다시 올리면 원래대로 (스크롤 애니메이션 2: 숙제)</p>
+    <section class="c24" style="height: 500px">
+      <p class="title">
+        🦄c24 scroll, scrollY (스크롤 애니메이션 1: 스크롤시 변하는 Navbar
+        만들기)
+      </p>
+      <p class="title">
+        🦄c25 scroll,classList.remove 스크롤을 다시 올리면 원래대로 (스크롤
+        애니메이션 2: 숙제)
+      </p>
 
       <!-- js 24-1) -->
       <div class="nav-menu">
-        <h4 class="large-logo">scroll</h4>     
-      </div>     
+        <h4 class="large-logo">scroll</h4>
+      </div>
     </section>
 
     <section class="c26">
-      <p class="title">🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기 1)</p>
+      <p class="title">
+        🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기
+        1)
+      </p>
       <p class="title">🦄c27 for반복문. (탭기능 만들기 2: 모든 버튼 구현)</p>
-      
+
       <div class="container mt-5">
         <ul class="list">
           <!-- 2) -->
           <li class="tab-button active">tab0</li>
-          <li class="tab-button ">tab1</li>
+          <li class="tab-button">tab1</li>
           <li class="tab-button">tab2</li>
         </ul>
 
@@ -179,27 +190,36 @@
     </section>
 
     <section class="c28">
-      <p class="title">🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault e.stopPropagation</p>
-     
-      <div class="black-background">   <!-- 2) -->
-        <div class="white-background"> <!-- 2-2) -->
-          <input type="email">  <!-- 2-2) -->
+      <p class="title">
+        🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault
+        e.stopPropagation
+      </p>
+
+      <div class="black-background">
+        <!-- 2) -->
+        <div class="white-background">
+          <!-- 2-2) -->
+          <input type="email" />
+          <!-- 2-2) -->
           <h3>bubbling1</h3>
         </div>
       </div>
-   
-      <br>   
-   
-      <div class="black-background2">    <!--  3) 4) -->
-        <div class="white-background"> 
-          <input type="email"> 
+
+      <br />
+
+      <div class="black-background2">
+        <!--  3) 4) -->
+        <div class="white-background">
+          <input type="email" />
           <h3>bubbling2</h3>
         </div>
-      </div> 
+      </div>
     </section>
 
     <section class="c29">
-      <p class="title">🦄c29 Array. Object. data type (Array 와 Object 자료형 기초)</p>
+      <p class="title">
+        🦄c29 Array. Object. data type (Array 와 Object 자료형 기초)
+      </p>
 
       <h4 id="data29">Data binding</h4>
 
@@ -211,10 +231,15 @@
     </section>
 
     <section class="c30">
-      <p class="title">🦄c30 input과 change 이벤트 (인터랙티브 form 만들기: )</p>
+      <p class="title">
+        🦄c30 input과 change 이벤트 (인터랙티브 form 만들기: )
+      </p>
+      <p class="title">
+        Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈 UI를, 등장시키는 기능만들기
+      </p>
 
       <form class="container">
-        <div class="form-group ">         
+        <div class="form-group">
           <p>상품선택</p>
 
           <!-- 3) -->
@@ -223,7 +248,7 @@
             <option>셔츠</option>
           </select>
 
-          <!--   셔츠사이즈 UI 일단 숨겨둠.-->    
+          <!--   셔츠사이즈 UI 일단 숨겨둠.-->
           <div class="size-select display-none">
             <p>사이즈선택</p>
 
@@ -234,12 +259,9 @@
               <option>105</option>
             </select>
           </div>
-    
         </div>
-    </form> 
+      </form>
     </section>
-
-
 
     <div style="margin: 200px"></div>
   </body>
