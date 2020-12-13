@@ -825,3 +825,50 @@ document.querySelector('#btn29').addEventListener('click',()=>{
   document.querySelector('#data29_3').innerHTML = arrayWithObject[0].brand /* array안의 object */
 });
 
+
+//  🦄c30  input과 change 이벤트 (인터랙티브 form 만들기: )
+
+/* 
+Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈를 고를 수 있는 UI를, 등장시키는 기능만들기  
+
+
+
+*/
+
+/* 
+
+●
+change, input 이벤트 : 
+form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <textarea> 태그들에서, 
+사용자가 값을 입력하거나 변경했을 때를 체크할 수 있는 이벤트
+
+
+각각 발동되는 시점이 다른데 
+
+1) input : input값이 변경될 때마다 실행됩니다.  (타이핑할때마다 계속 작동함)
+
+
+2-1) change가 <input>태그인 경우: input값이 바뀌고, focus잃을때 작동함
+
+(선택 후 다른곳을 클릭해야만(focus를 잃어야) 작동함)
+
+2-2) change가 <select>태그인 경우 :  focus와 상관없이 , option 선택하면 작동함
+
+(값이 변경될 때 바로 작동함 )
+
+
+
+
+ 
+
+
+
+$('#option1').on('change', function(){
+      
+    if ( $('#option1').val() == '셔츠' ) {
+      $('.size-select').show();
+    }
+
+});
+
+*/
