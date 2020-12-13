@@ -715,35 +715,96 @@ select	option 태그 등에서 선택을 햇을 때 발생
 
 // 🦄c29 Array. Object. data type (Array 와 Object 자료형 기초)
 
+/* 1) Data Types :
+
+1-1) primitives Data Types :
+
+undefined 
+
+Boolean
+Number 
+String
+BigInt 
+Symbol 
+
+1-2) Structural Types:
+
+Object 
+Function 
+null  
+*/
+
+/* 영어
+[ ] { } ( ) : 모든 것 총칭 :  bracket
+
+[ ] : square bracket 
+
+{ } : curly bracket
+
+( ) : parentheses , round bracket */
+
+
+// 2) string '' "" `` 모두 사용가능
+
+var Data = 'string'
+var Data = "string"
+var Data = `stirng`
+
+// 3) number
+var Data =  20;  /* number */
+var Data =  '20'; /* string */
+
+/* 
+4) array :
+[ ] square braket 사용
+String, number, array...넣을 수 있음 
+
+4-2) 사용방법 : array이름[1]  */
+
+var DataArray = ['bmw', 520, [1,2,3]]
+
+console.log(DataArray[1]); /* 4-2) */
 
 
 /* 
-Array 
+5) Object :
+{ } curly bracket 사용
+key : data이름 의미함 (data ❌)
+value : 실제 data 의미 함
 
-var 어레이 = ['BMW', 520, 'white'];
+5-2) 사용방법 : object이름.key (ex: brand 넣으면, 'bmw'출력됨)
+5-3) 사용방법 2 
+*/
 
-var 어레이 = ['BMW', 520, 'white'];
-console.log(어레이[1]);
+var dataObject = { 
+  brand : 'BMW', 
+  model : 520 };
+
+console.log(dataObject.brand);  /*  5-2) 사용방법  */
+console.log(dataObject['brand']);  /*  5-3) 사용방법 */
+
+/*
+6) object안에 array, object, function 등등 다 넣을 수 있음 */
+
+var dataObject2 = { 
+  brand : 'BMW', 
+  model : 520,  
+
+  array3 : [1,2,3],
+
+  object2: {
+    key2: 'value2',
+    key3: 'value3'}
+};
+
+console.log(dataObject2.object2.key3); /* 사용방법 */
 
 
-Object 
-var 오브젝트 = { brand : 'BMW', model : 520 };
-
-
-자료의 이름은 보통 key 라는 용어로 칭하고 실제 자료는 value
-
-
-
-저장한 자료를 뽑는 법
-
-var 오브젝트 = { brand : 'BMW', model : 520 };
-console.log(오브젝트.brand);
-
-오브젝트[‘brand’] 이런 식으로도 뽑으실 수 있습니다.
 
 
 
 
+/* 
 
  var 자료 = [ { brand : 'BMW' }, { model : 520 } ];
 
