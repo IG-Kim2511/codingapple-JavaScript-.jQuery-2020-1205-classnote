@@ -213,18 +213,22 @@
     <section class="c30">
       <p class="title"> 🦄c30  input과 change 이벤트 (인터랙티브 form 만들기: )</p>
 
-      <form class="container my-5">
-        <div class="form-group">
-         
+      <form class="container">
+        <div class="form-group ">         
           <p>상품선택</p>
-          <select class="form-control" id="option1">
+
+          <!-- 3) -->
+          <select id="select1">
             <option>모자</option>
             <option>셔츠</option>
           </select>
-          
-          <div class="size-select">
-            <p class="mt-4">사이즈선택</p>
-            <select class="form-control" id="option2">
+
+          <!--   셔츠사이즈 UI 일단 숨겨둠.-->    
+          <div class="size-select display-none">
+            <p>사이즈선택</p>
+
+            <!-- 4-1) -->
+            <select id="select2">
               <option>95</option>
               <option>100</option>
               <option>105</option>
@@ -234,7 +238,7 @@
         </div>
     </form> 
 
-    
+
 
 
     </section>

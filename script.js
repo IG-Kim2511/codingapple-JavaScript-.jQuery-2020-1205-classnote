@@ -189,7 +189,7 @@ function 삼육구게임(숫자){
 // 🦄c14 else if 활용 : 폼 전송시 공백체크 기능 만들기
 
 /* 
-nodeValue() : input안의 내용물
+.value : input안의 내용물   (jQuery에서는 .val())
 
 "" : 빈칸
 
@@ -826,18 +826,9 @@ document.querySelector('#btn29').addEventListener('click',()=>{
 });
 
 
-//  🦄c30  input과 change 이벤트 (인터랙티브 form 만들기: )
+//🦄c30 input과 change 이벤트 .value (인터랙티브 form 만들기: )
 
 /* 
-Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈를 고를 수 있는 UI를, 등장시키는 기능만들기  
-
-
-
-*/
-
-/* 
-
-●
 change, input 이벤트 : 
 form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <textarea> 태그들에서, 
 사용자가 값을 입력하거나 변경했을 때를 체크할 수 있는 이벤트
@@ -847,28 +838,40 @@ form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <text
 
 1) input : input값이 변경될 때마다 실행됩니다.  (타이핑할때마다 계속 작동함)
 
-
 2-1) change가 <input>태그인 경우: input값이 바뀌고, focus잃을때 작동함
 
 (선택 후 다른곳을 클릭해야만(focus를 잃어야) 작동함)
 
 2-2) change가 <select>태그인 경우 :  focus와 상관없이 , option 선택하면 작동함
 
-(값이 변경될 때 바로 작동함 )
+(값이 변경될 때 바로 작동함 )   */
 
 
+/* 
+Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈 UI를, 등장시키는 기능만들기  
 
 
- 
+알고리즘: 
+3) select input에서 셔츠라는 값을 선택하면, UI를 보여줌
 
+4-1) 만약,사용자가 선택한 값이, 셔츠인경우, ui를 보여줌
 
+4-2)  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~가 아닌때, ui를 숨김 */
 
-$('#option1').on('change', function(){
-      
-    if ( $('#option1').val() == '셔츠' ) {
-      $('.size-select').show();
-    }
+/* 
+5) .value : input태그안의 값 가져옴. (jQuery에서 .val())  */
+
+var select1 = document.querySelector('#select1');
+
+var sizeSelect = document.querySelector('.size-select');
+
+select1.addEventListener('change',()=>{
+
+  if(select1.value =='셔츠'){   /* 4-1)  5) */
+    sizeSelect.classList.add('display-block');  /* 4-1) */
+  } else{
+    sizeSelect.classList.remove('display-block'); /* 4-2) */
+  }
 
 });
 
-*/

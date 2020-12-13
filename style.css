@@ -13,6 +13,14 @@ body {
   position: relative;
 }
 
+.display-none{
+  display: none;
+}
+
+.display-block{
+  display: block;
+}
+
 /* 🦄c3  */
 
 .alert-box {
@@ -148,3 +156,4 @@ display: block;
   width: 20rem;
   height: 10rem;
 }
+
