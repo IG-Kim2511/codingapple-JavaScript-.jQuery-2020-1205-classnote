@@ -711,3 +711,63 @@ mousemove	마우스가 움직였을 때 발생
 mouseup	마우스에서 손을 땟을 때 발생
 select	option 태그 등에서 선택을 햇을 때 발생
 */
+
+
+// 🦄c29 Array. Object. data type (Array 와 Object 자료형 기초)
+
+
+
+/* 
+Array 
+
+var 어레이 = ['BMW', 520, 'white'];
+
+var 어레이 = ['BMW', 520, 'white'];
+console.log(어레이[1]);
+
+
+Object 
+var 오브젝트 = { brand : 'BMW', model : 520 };
+
+
+자료의 이름은 보통 key 라는 용어로 칭하고 실제 자료는 value
+
+
+
+저장한 자료를 뽑는 법
+
+var 오브젝트 = { brand : 'BMW', model : 520 };
+console.log(오브젝트.brand);
+
+오브젝트[‘brand’] 이런 식으로도 뽑으실 수 있습니다.
+
+
+
+
+
+ var 자료 = [ { brand : 'BMW' }, { model : 520 } ];
+
+  $('#title').html(자료...?);
+
+  console.log(자료)
+이렇게 쓰면 [{ … },{ … }] 대충 이런 식으로 콘솔창에 뭔가 출력이 되죠? 
+
+
+console.log(자료[0])
+이렇게 쓰면 { brand : ‘BMW’ } 요거가 출력이 되죠? 
+
+
+
+console.log(자료[0].brand)
+이렇게 쓰면 내가 원하는 자료가 뿅하고 나오게됩니다.
+
+
+
+  var 자료 = [ { brand : 'BMW' }, { model : 520 } ];
+
+  $('#title').html(자료[0].brand);
+
+ data binding : 
+자바스크립트로 데이터를 HTML에 꽂아넣는 작업
+
+*/
