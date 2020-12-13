@@ -766,6 +766,9 @@ var DataArray = ['bmw', 520, [1,2,3]]
 console.log(DataArray[1]); /* 4-2) */
 
 
+/*4-3) array안의 object 형식 : [ { }, { },{ } ] */
+var array안object = [{brand:'amazon'}, {price:300}]
+
 /* 
 5) Object :
 { } curly bracket 사용
@@ -782,8 +785,8 @@ var dataObject = {
 
 console.log(dataObject.brand);  /*  5-2) 사용방법  */
 console.log(dataObject['brand']);  /*  5-3) 사용방법 */
-
 /*
+
 6) object안에 array, object, function 등등 다 넣을 수 있음 */
 
 var dataObject2 = { 
@@ -798,8 +801,9 @@ var dataObject2 = {
 };
 
 console.log(dataObject2.object2.key3); /* 사용방법 */
-
 /* 
+
+
 7)
 data binding : 
 자바스크립트로 데이터를 HTML에 꽂아넣는 작업
@@ -811,34 +815,13 @@ var array7=['LG', 'samsung'];
 
 var object7 = { brand:'apple' , price : 5000};
 
+var arrayWithObject = [{brand:'amazon'}, {price:300}]
+
 document.querySelector('#btn29').addEventListener('click',()=>{
   document.querySelector('#data29').innerHTML = array7[0]  /* array */
+
   document.querySelector('#data29_2').innerHTML = object7.price /* object */
-})
 
-/* 
+  document.querySelector('#data29_3').innerHTML = arrayWithObject[0].brand /* array안의 object */
+});
 
- var 자료 = [ { brand : 'BMW' }, { model : 520 } ];
-
-  $('#title').html(자료...?);
-
-  console.log(자료)
-이렇게 쓰면 [{ … },{ … }] 대충 이런 식으로 콘솔창에 뭔가 출력이 되죠? 
-
-
-console.log(자료[0])
-이렇게 쓰면 { brand : ‘BMW’ } 요거가 출력이 되죠? 
-
-
-
-console.log(자료[0].brand)
-이렇게 쓰면 내가 원하는 자료가 뿅하고 나오게됩니다.
-
-
-
-  var 자료 = [ { brand : 'BMW' }, { model : 520 } ];
-
-  $('#title').html(자료[0].brand);
-
-
-*/
