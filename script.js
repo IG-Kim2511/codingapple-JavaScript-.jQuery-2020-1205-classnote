@@ -872,6 +872,5 @@ select1.addEventListener('change',()=>{
   } else{
     sizeSelect.classList.remove('display-block'); /* 4-2) */
   }
-
 });
 
