@@ -799,10 +799,22 @@ var dataObject2 = {
 
 console.log(dataObject2.object2.key3); /* 사용방법 */
 
+/* 
+7)
+data binding : 
+자바스크립트로 데이터를 HTML에 꽂아넣는 작업
 
+Q: array, object 내의 데이터(실전에서의 서버데이터)를 👉 html로 보내서 바꾸기
+ */
 
+var array7=['LG', 'samsung'];
 
+var object7 = { brand:'apple' , price : 5000};
 
+document.querySelector('#btn29').addEventListener('click',()=>{
+  document.querySelector('#data29').innerHTML = array7[0]  /* array */
+  document.querySelector('#data29_2').innerHTML = object7.price /* object */
+})
 
 /* 
 
@@ -828,7 +840,5 @@ console.log(자료[0].brand)
 
   $('#title').html(자료[0].brand);
 
- data binding : 
-자바스크립트로 데이터를 HTML에 꽂아넣는 작업
 
 */
