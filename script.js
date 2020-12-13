@@ -198,6 +198,46 @@ click
 input : 글을 쓰고 있을때
 change : 글 다 쓰고 끝났을때 (빈칸이 글로 채워지면서 value가 바뀌었을때) */
 
+/* 
+$('form').on('submit',function(e){ 
+  if (이메일 input이 공백){
+    전송을 막고 안내문을 띄워야함 
+  } else if (패스워드 input이 공백){
+    전송을 막고 안내문을 띄워야함 
+  } 
+});  */
+
+document.querySelector('.form14').addEventListener('submit',(e)=>{
+  
+  if( document.querySelector('#email').value==""){
+
+    e.preventDefault();
+
+
+  }else if(){
+
+
+  }
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 🦄c15 var let const 변수와 변수의 활용법
 
