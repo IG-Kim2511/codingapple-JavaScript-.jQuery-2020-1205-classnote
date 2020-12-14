@@ -834,7 +834,6 @@ change, input 이벤트 :
 form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <textarea> 태그들에서, 
 사용자가 값을 입력하거나 변경했을 때를 체크할 수 있는 이벤트
 
-
 각각 발동되는 시점이 다른데 
 
 1) input : input값이 변경될 때마다 실행됩니다.  (타이핑할때마다 계속 작동함)
@@ -876,8 +875,56 @@ select1.addEventListener('change',()=>{
 });
 
 
-// 🦄c31 double quotes (인터랙티브 form 만들기2 : HTML을 동적으로 생성하기)
+// 🦄c31 .innerHTML, double quotes, js로 html생성해서 html파일에 넣기. (인터랙티브 form 만들기2:)
 
+/* 
+1) q: js로 html생성해서 html파일에 넣기. 
+셔츠, 바지를 선택하면 각각의 option3개를 만들어서 집어넣음
+
+2) 알고리즘:
+ 2-1)만약, 사용자가 입력한  값이 '셔츠'라면
+ 2-2)셔츠용 option을 원하는곳에 innerHTML   (jQuery : append(); )
+ 2-3)'var 템플릿'를 만들어서 재활용. (굳이 하드코딩으로 또 만들 필요 없음)
+
+3) es6문법 back quotes symbol 사용하면 엔터키 가능
+ (일반 quotes symbol에서는 엔터키 ❌)   */
+
+var select31 = document.querySelector('#select31');
+var select31_2 = document.querySelector('#select31-2');
+
+var sizeSelect31 = document.querySelector('.size-select31');
+
+select31.addEventListener('change',()=>{
+
+  if(select31.value =='셔츠'){    /* 2-1) */
+
+    sizeSelect31.classList.add('display-block');  
+
+    var 템플릿 = 
+    `<option>95</option>    /* 3) back quotes  */
+    <option>100</option>
+    <option>105</option>`;
+
+    select31_2.innerHTML=템플릿;  /* 2-2)  */
+
+    /*같은뜻 select31_2.innerHTML = `<option>95</option> <option>100</option> <option>105</option>`    */
+
+  } else if(select31.value =='바지'){
+    
+    sizeSelect31.classList.add('display-block');
+
+    var 템플릿 =              /* 2-3) */
+    `<option>28</option>    
+    <option>30</option>
+    <option>32</option>`;
+
+    select31_2.innerHTML=템플릿;
+
+  }
+
+  
+  }
+);
 
 
 
