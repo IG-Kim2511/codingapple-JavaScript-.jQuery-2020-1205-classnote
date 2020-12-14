@@ -896,50 +896,29 @@ var sizeSelect31 = document.querySelector('.size-select31');
 
 select31.addEventListener('change',()=>{
 
-  if(select31.value =='셔츠'){    /* 2-1) */
+    if(select31.value =='셔츠'){    /* 2-1) */
 
-    sizeSelect31.classList.add('display-block');  
+      sizeSelect31.classList.add('display-block');  
 
-    var 템플릿 = 
-    `<option>95</option>    /* 3) back quotes  */
-    <option>100</option>
-    <option>105</option>`;
+      var 템플릿 = 
+      `<option>95</option>    /* 3) back quotes  */
+      <option>100</option>
+      <option>105</option>`;
 
-    select31_2.innerHTML=템플릿;  /* 2-2)  */
+      select31_2.innerHTML=템플릿;  /* 2-2)  */
 
-    /*같은뜻 select31_2.innerHTML = `<option>95</option> <option>100</option> <option>105</option>`    */
+      /*같은뜻 select31_2.innerHTML = `<option>95</option> <option>100</option> <option>105</option>`    */
 
-  } else if(select31.value =='바지'){
-    
-    sizeSelect31.classList.add('display-block');
+    } else if(select31.value =='바지'){
+      
+      sizeSelect31.classList.add('display-block');
 
-    var 템플릿 =              /* 2-3) */
-    `<option>28</option>    
-    <option>30</option>
-    <option>32</option>`;
+      var 템플릿 =              /* 2-3) */
+      `<option>28</option>    
+      <option>30</option>
+      <option>32</option>`;
 
-    select31_2.innerHTML=템플릿;
-
-  }
-
-  
+      select31_2.innerHTML=템플릿;
+    }  
   }
 );
-
-
-
-
-
-/* 
-
-
-$('#option1').on('change', function(){
-      if ( $('#option1').val() == '셔츠' ) {
-         var 템플릿 = '<option>95</option><option>100</option><option>105</option>';
-         $('#option2').append(템플릿);
-      } else {
-         var 템플릿 = '<option>28</option><option>30</option><option>32</option>';
-         $('#option2').append(템플릿);
-      }
-});
-*/
