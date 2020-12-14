@@ -187,6 +187,7 @@ function 삼육구게임(숫자){
 }
 
 // 🦄c14 else if 활용 : 폼 전송시 공백체크 기능 만들기
+// 👉c30강에서 다시 다룸 + 정리 되어있음
 
 /* 
 .value : input안의 내용물   (jQuery에서는 .val())
@@ -874,3 +875,24 @@ select1.addEventListener('change',()=>{
   }
 });
 
+
+// 🦄c31 double quotes (인터랙티브 form 만들기2 : HTML을 동적으로 생성하기)
+
+
+
+
+
+
+/* 
+
+
+$('#option1').on('change', function(){
+      if ( $('#option1').val() == '셔츠' ) {
+         var 템플릿 = '<option>95</option><option>100</option><option>105</option>';
+         $('#option2').append(템플릿);
+      } else {
+         var 템플릿 = '<option>28</option><option>30</option><option>32</option>';
+         $('#option2').append(템플릿);
+      }
+});
+*/
