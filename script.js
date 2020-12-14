@@ -909,11 +909,11 @@ select31.addEventListener('change',()=>{
 
       /*같은뜻 select31_2.innerHTML = `<option>95</option> <option>100</option> <option>105</option>`    */
 
-    } else if(select31.value =='바지'){
+  } else if(select31.value =='바지'){
       
       sizeSelect31.classList.add('display-block');
 
-      var 템플릿 =              /* 2-3) */
+      var 템플릿 =     /* 2-3) */
       `<option>28</option>    
       <option>30</option>
       <option>32</option>`;
@@ -922,3 +922,113 @@ select31.addEventListener('change',()=>{
     }  
   }
 );
+
+// 🦄c32 인터랙티브 form 만들기3 : forEach 반복문을 사용해보자
+
+
+/* 
+퀘스트 : 옵션이 수백개라면?? -->소프트코딩. forEach사용
+
+알고리즘 :
+반복문이 돌때 변수에 26,28,30...array안의 data 넣기
+
+
+
+
+*/
+
+/* 
+for 반복문: 
+
+반복문이 돌 때마다 i라는 숫자는 0,1,2,3,4,5가 되기 때문에 
+
+사이즈[i]라고 쓰시면 반복문이 돌 때마다 사이즈라는 [array]에 저장된 0번째, 1번째, 2번째… 5번째 데이터를 출력할 수 있습니다. 
+
+이는 곧 26,28,30 … 36 이라는 숫자죠?  */
+
+
+
+var 어레이32 = [26,28,30,32,34,36];
+
+$('#select32').on('change', function(){
+  if ($('#select32').val() == '바지'){
+
+     for (var i = 0; i < 어레이32.length; i++) {
+       var 템플릿 = `<option>${어레이32[i]}</option>`;  
+       $('#select32_2').append(템플릿);
+     }
+ }
+});
+
+
+
+/* var 어레이32 = [26,28,30,32,34,36];
+
+
+var select32 = document.querySelector('#select32');
+var select32_2 = document.querySelector('#select32_2');
+
+select32.addEventListener('change',()=>{
+
+  if(select32.value =='바지'){  
+
+    for (let i = 0; i < 어레이32.length; i++) {
+      var 템플릿 = `<option>${어레이32[i]}</option>`;
+      select32_2.innerHTML = 템플릿;
+      
+    }
+  
+}});
+ */
+
+
+
+/* forEach 반복문 : 
+
+어레이 = [data, data, data, data]
+
+어레이.forEach((i)=>{
+
+});
+
+어레이의 data갯수만큼 반복함
+
+파라미터 i : “forEach 왼쪽에 있는 자료에 저장된 하나하나의 데이터”입니다.  
+
+*/
+
+
+var 사이즈 = [111,222,333,444,555,666];
+
+$('#select32').on('change', function(){
+  if ($('#select32').val() == '바지'){
+
+     사이즈.forEach(function(i){
+        var 템플릿2 = `<option>${i}</option>`;
+        $('#select32_2').append(템플릿2);
+     });
+ }
+});
+
+
+
+
+
+/* 
+var 어레이32_2 = [100,200,300,400,500,600];
+
+var select32 = document.querySelector('#select32');
+var select32_2 = document.querySelector('#select32_2');
+
+select32.addEventListener('change',()=>{
+
+  if(select32.value =='셔츠'){  
+
+    어레이32_2.forEach((i)=>{
+    
+      select32_2.innerHTML = `<option>${i}</option>`;
+    })
+}});
+ */
+
+
