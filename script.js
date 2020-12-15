@@ -1,6 +1,4 @@
 
-
-
 /* 자바스크립트 로 만들어보기....실패
 
 ???? 아직 해결 못함 
@@ -12,7 +10,7 @@
 
 그래서 반복문의 맨 마지막 600이라는 정보만 꽂혀있겠군요. 
 
-반복문 다 돌린 뒤에 innerHTML = 어쩌구 를 한번만 하도록 합시다. 
+반복문 다 돌린 뒤에 innerHTML = 어쩌구 를 한번만 하도록 합시다.  */
 
 var 어레이32 = [26,28,30,32,34,36];
 
@@ -39,6 +37,8 @@ var 어레이32_2 = [100,200,300,400,500,600];
 var select32 = document.querySelector('#select32');
 var select32_2 = document.querySelector('#select32_2');
 
+var sizeSelect32 = document.querySelector('.size-select32');
+
 select32.addEventListener('change',()=>{
 
   if(select32.value =='셔츠'){  
@@ -47,9 +47,22 @@ select32.addEventListener('change',()=>{
     
       var 템플릿2 = `<option>${i}</option>`
       select32_2.innerHTML = 템플릿2; 
+
+    //   var newcontent = document.createElement('option');
+    //   newcontent.innerHTML = `${i}`;
+
+    //   while (newcontent.firstChild) {
+    //     sizeSelect32.appendChild(newcontent.firstChild);
+    // }
+
+
+
+      // sizeSelect32.appendChild(document.createTextNode( `<option>${i}</option>`));
+
+
     })
 }});
 
-*/
+
 
 
