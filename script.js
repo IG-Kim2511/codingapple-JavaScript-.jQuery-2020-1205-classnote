@@ -1,6 +1,5 @@
-// ●
 
-/* var 어레이32 = [26,28,30,32,34,36];
+var 어레이32 = [26,28,30,32,34,36];
 
 
 var select32 = document.querySelector('#select32');
@@ -17,12 +16,12 @@ select32.addEventListener('change',()=>{
     }
   
 }});
- */
 
 
 
 
-/* 
+
+
 var 어레이32_2 = [100,200,300,400,500,600];
 
 var select32 = document.querySelector('#select32');
@@ -37,6 +36,6 @@ select32.addEventListener('change',()=>{
       select32_2.innerHTML = `<option>${i}</option>`;
     })
 }});
- */
+
 
 
