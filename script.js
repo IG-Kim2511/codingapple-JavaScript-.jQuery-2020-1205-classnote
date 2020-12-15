@@ -19,9 +19,6 @@ select32.addEventListener('change',()=>{
 
 
 
-
-
-
 var 어레이32_2 = [100,200,300,400,500,600];
 
 var select32 = document.querySelector('#select32');
