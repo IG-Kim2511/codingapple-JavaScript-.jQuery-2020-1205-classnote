@@ -1177,3 +1177,49 @@ function 목표량계산기(판매실적array, 평균월별판매량){
 }
 
 목표량계산기( [10, 20, 30, 40, 50] , 35 ) /* 각 사람마다 넣을 데이터 */
+
+
+
+// 🦄c35 Ajax 요청하기 1: $.ajax. done(function(데이터){.}
+
+/* 
+1) 예제용 코딩애플 임시 서버 URL : 
+https://codingapple1.github.io/hello.txt (여기로 GET요청을 하면 인사말이 딸려옵니다.)
+
+
+2) request종류: 
+
+get : 데이터를 서버에서 가져옴.
+post : 데이터를 서버로 보냄
+
+
+3) jQuery로 Ajax요청하기 
+
+$.ajax({ 
+  url : '',
+  type : 'GET'
+});
+*/
+
+/* 3) */
+$.ajax({ 
+  url : 'https://codingapple1.github.io/hello.txt',
+  type : 'GET'
+});
+
+
+/* 4) 결과(데이터)를 출력해보기  
+
+done((데이터파라미터)=>{})
+
+콜백함수에 파라미터 아무거나 집어넣으신 후에 그걸 콘솔창에 출력해보시면
+
+그것이 바로 받아온 데이터입니다. 
+
+*/
+$.ajax({ 
+  url : 'https://codingapple1.github.io/hello.txt',
+  type : 'GET'
+}).done(function(데이터파라미터){
+console.log(데이터파라미터);
+});
