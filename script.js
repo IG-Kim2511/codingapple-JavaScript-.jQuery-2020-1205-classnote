@@ -1223,3 +1223,65 @@ $.ajax({
 }).done(function(데이터파라미터){
 console.log(데이터파라미터);
 });
+
+// 5)숙제) 버튼을 click하면, 데이터를 받아와서, h4 태그에 집어넣으려면?
+
+
+
+//🦄c36 Ajax 요청하기2 JSON : $...fail(.) $..always(.) JSON.parse(.) JSON.stringify(.)
+
+
+/*
+1)저번시간 숙제) 버튼을 click하면, 데이터를 받아와서, h4 태그에 집어넣으려면?
+
+1-2) 버튼을 click하면,
+1-3) 받아온 데이터를  <h4 id="hello"> 에 꽂아야합니다.  */
+
+$('.btn36').click(function(){ /* 1-2) */
+  $.ajax({ 
+    url : 'https://codingapple1.github.io/hello.txt',
+    type : 'GET'
+  }).done(function(데이터파라미터){
+  // console.log(데이터파라미터);
+    $('#hello').html(데이터파라미터); /* 1-3) */
+  });
+
+});
+
+
+/* 
+4)
+상품 더보기 버튼을 만들어보자 
+
+4-2) 버튼을 click하면,
+4-3) 서버에 Ajax 요청을 해서 
+4-4)상품목록 데이터를 가져온 뒤에
+4-4) HTML에 표시해보도록 합시다. 
+
+예제용 코딩애플 임시 서버 URL : 
+https://codingapple1.github.io/data.json (여기로 GET요청을 하면 상품데이터가 딸려옵니다.)
+
+ */
+
+$('.btn-danger').click(function(){  /* 4-2) */
+  $.ajax({ 
+    url : 'https://codingapple1.github.io/data.json', /* 4-3) */
+    type : 'GET'
+  }).done(function(데이터){ /* 4-4) */
+    $('.card-title').html(데이터.model);  /* 4-5) */
+    $('.card-img-top').attr('src', 데이터.img);  /* 4-5) */
+  });
+});
+
+
+/* 
+6) 자바스크립트 JSON )
+ JSON.parse() : json -----> object변환
+ JSON.stringify() : object ----->  json변환
+
+👻캡쳐 필기정리 : 
+
+var 오브젝트 = JSON.parse(여러분의 제이슨데이터)
+
+var 제이슨 = JSON.stringify(여러분의 오브젝트데이터)
+*/
