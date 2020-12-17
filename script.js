@@ -1181,6 +1181,7 @@ function 목표량계산기(판매실적array, 평균월별판매량){
 
 
 // 🦄c35 Ajax 요청하기 1: $.ajax. done(function(데이터){.}
+// 👉 react 에서 ajax 간편하게 가능함
 
 /* 
 1) 예제용 코딩애플 임시 서버 URL : 
@@ -1283,3 +1284,41 @@ var 제이슨 = JSON.stringify(여러분의 오브젝트데이터)
 
 // 🦄c37 (CSS) Position : sticky 활용하기
 // 👉css 파일
+
+
+
+// 🦄c38 스크롤 위치에 따라 변하는 애니메이션 : Apple Music UI 만들기
+
+//  👉css 파일
+//  👻캡쳐 필기정리 :  1차함수....이용하는데 이해 못함
+
+ 
+/* 이거 비슷한것 같은데 답을 못찾겠음 1
+
+$(document).ready(function(){ 
+  $(window).scroll(function(){ 
+      $('.card-box38').css("opacity",1- $(window).scrollTop() / 6700) 
+       
+  }) 
+})  */
+
+/*  이거 비슷한것 같은데 답을 못찾겠음 2
+
+var fadeStart=6580 // 100px scroll or less will equiv to 1 opacity
+,fadeUntil=7030 // 200px scroll or more will equiv to 0 opacity
+,fading = $('#fading')
+;
+
+$(window).bind('scroll', function(){
+var offset = $(document).scrollTop()
+    ,opacity=0
+;
+if( offset<=fadeStart ){
+    opacity=1;
+}else if( offset<=fadeUntil ){
+    opacity=1-offset/fadeUntil;
+}
+
+$('.card-box38').eq(0).css('opacity',opacity);
+}); */
+

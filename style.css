@@ -177,3 +177,21 @@ ul.list::after {
   top: 100px; /* 1-2 */
   float: right;
 }
+
+/* 🦄c38 */
+
+.card-background38 {
+  height: 2000px; /*  */
+}
+
+.card-box38 {
+  position: sticky; /*  */
+  top: 200px; 
+}
+
+.card-box38 img {
+  display: block;
+  margin: auto;
+}
+
+  
