@@ -9,15 +9,15 @@ body {
 .overflow {
   overflow: hidden;
 }
-.relative{
+.relative {
   position: relative;
 }
 
-.display-none{
+.display-none {
   display: none;
 }
 
-.display-block{
+.display-block {
   display: block;
 }
 
@@ -64,7 +64,7 @@ body {
 
 /* 🦄c22 */
 
-/* css 22-2) */  
+/* css 22-2) */
 .slide-next {
   position: absolute;
   top: 45%;
@@ -73,87 +73,107 @@ body {
 }
 
 /*🦄c24*/
-.nav-menu {  
-
+.nav-menu {
   /* js 24-1) */
-  background : lightblue;
-  color : lightcoral;
+  background: lightblue;
+  color: lightcoral;
 }
 
- /* js 24-1) */
-.nav-black{
-  background : lightyellow;
-  color : black;
+/* js 24-1) */
+.nav-black {
+  background: lightyellow;
+  color: black;
 }
 
 /* 🦄c25 */
 .large-logo {
-  font-size : 40px;
+  font-size: 40px;
   margin: 0;
 }
 
 .small-logo {
-  font-size : 20px;
+  font-size: 20px;
 }
 
 /* js 25-2) */
 .nav-menu h4 {
-  transition : all 0.5s;
+  transition: all 0.5s;
 }
 
 /* 🦄c26 */
 ul.list {
-list-style-type: none;
-margin: 0;
-padding: 0;
-border-bottom: 1px solid #ccc;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
 }
 
 ul.list::after {
-content: '';
-display: block;
-clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .tab-button {
-display: block;
-padding: 10px 20px 10px 20px;
-float: left;
-margin-right: -1px;
-margin-bottom: -1px;
-text-decoration: none;
-cursor: pointer;
+  display: block;
+  padding: 10px 20px 10px 20px;
+  float: left;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* 26-2) */
 .active {
-border: 3px solid orange;
+  border: 3px solid orange;
 }
 
 .tab-content {
-display: none;
-padding: 10px;
+  display: none;
+  padding: 10px;
 }
 
 /* 26-3) */
 .show {
-display: block;
+  display: block;
 }
-
 
 /* 🦄c28  */
 
-.black-background{
+.black-background {
   background-color: grey;
   display: block;
   width: 20rem;
   height: 10rem;
 }
 
-.black-background2{
+.black-background2 {
   background-color: grey;
   display: block;
   width: 20rem;
   height: 10rem;
 }
 
+/* 🦄c37 */
+
+/* 1)
+(주의점) position : sticky는 
+1-1) 스크롤을 할 만한 부모 박스가 있어야하고 
+1-2) top 등 좌표속성과 함께 써야 제대로 보입니다. 
+ */
+
+.grey37 {
+  background: black;
+  height: 3000px; /* 1-1) */
+}
+.left-text {
+  float: left;
+  color: white;
+  padding: 20px;
+}
+.sticky {
+  position: sticky; /* 1-2 */
+  top: 100px; /* 1-2 */
+  float: right;
+}

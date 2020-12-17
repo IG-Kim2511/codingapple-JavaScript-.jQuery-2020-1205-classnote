@@ -1279,3 +1279,7 @@ var 오브젝트 = JSON.parse(여러분의 제이슨데이터)
 
 var 제이슨 = JSON.stringify(여러분의 오브젝트데이터)
 */
+
+
+// 🦄c37 (CSS) Position : sticky 활용하기
+// 👉css 파일
