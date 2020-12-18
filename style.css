@@ -194,4 +194,7 @@ ul.list::after {
   margin: auto;  
 }
 
-/* c39 */
+/* 🦄c40 */
+.transforming {
+  transition : transform 0.5s;
+}

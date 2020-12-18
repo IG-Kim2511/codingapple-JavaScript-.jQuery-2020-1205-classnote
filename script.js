@@ -1361,3 +1361,46 @@ var 매니저 = new Hammer.Manager(이미지1); /* 2) */
     $('.c39 .slide-container').css('transform', 'translateX(' + e.deltaX + ')' );
   }
 })
+
+
+// 🦄c40 Hammer.js: e.isFinal setTimeout (이미지 슬라이드 터치 기능 만들기 2)
+
+/* 
+q) 마우스를 놓으면 이미지2로 서서히 변하도록 변하는 기능을 더해봅시다.
+
+2) 마우스를 놓았을 때만 잠깐 transition 부여하기 
+이미지2를 보여주기 전에 잠깐 transition을 부여해주면 되겠네요
+
+2-2) e.isFinal : 터치끝났는지 알려줌
+
+2-4) transforming이라는 클래스를 부여했다가 다시 제거하자는건데, 
+
+4) 그런데 약간 시간차를 두고 제거하는게 좋을 것 같습니다. 
+setTimeout(function(){ 실행할코드 }, 기다릴시간)
+
+6) 오늘의 교훈은, 이미 터치기능이 있는 carousel 라이브러리를 설치하면, 이렇게 노가다할 필요가 없다라는 것입니다. 
+*/
+
+var 이미지1 = document.querySelectorAll('.c40 .slide-box img')[0];
+    
+var 매니저 = new Hammer.Manager(이미지1);
+매니저.add(new Hammer.Pan({ threshold: 0 }));
+    
+매니저.on('pan', function(e){
+      //console.log(e.deltaX);
+      if ( e.deltaX < -1 ){
+        $('.c40 .slide-container').css('transform', 'translateX('+ e.deltaX +'px)');
+        
+        //만약에 이사람이 마우스를 놓으면 ... 
+        if (e.isFinal){                                       /* 2-2) */
+        //두번째 사진으로 쇽 변해야함 
+          $('.c40 .slide-container').addClass('transforming');  /* 2-4) */
+          $('.c40 .slide-container').css('transform', 'translateX(-100vw)');
+          setTimeout(function(){                                   /* 4) */
+            $('.c40 .slide-container').removeClass('transforming');    /* 2-4) */
+          }, 500)
+          
+        }
+      }
+});
+
