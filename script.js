@@ -1324,7 +1324,6 @@ $('.card-box38').eq(0).css('opacity',opacity);
 
 
 // 🦄c39 Hammer.js: new Hammer.Manager() .add() Pann( { threshold:0 }) e.deltaX (Hammer.js로 이미지 슬라이드 터치 기능 만들기 1)
-// 일단 실습은 실패한 상황 ㅠㅠ
 
 /* 
 1) Hammer.js (-터치전용 프레임워크), jQuery 검색해서 다운받아 HTML에 첨부
@@ -1349,7 +1348,8 @@ pinch () : 이미지 확대 , 축소
 /*  
 1번째 이미지 가져옴
 jQuery 해석:  $('.slide-box img').eq(0); */
-var 이미지1 = document.querySelectorAll('.slide-box img')[0];
+
+var 이미지1 = document.querySelectorAll('.c39 .slide-box img')[0];
     
 var 매니저 = new Hammer.Manager(이미지1); /* 2) */
 매니저.add(new Hammer.Pan({ threshold: 0 })); /* 3) 4) 4-2) */
@@ -1358,6 +1358,6 @@ var 매니저 = new Hammer.Manager(이미지1); /* 2) */
   console.log(e.deltaX) /* 5) */
 
   if (e.deltaX < -1) {  /* 5-2) */
-    $('.slide-container').css('transform', 'translateX(' + e.deltaX + ')' );
+    $('.c39 .slide-container').css('transform', 'translateX(' + e.deltaX + ')' );
   }
 })
