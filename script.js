@@ -1376,7 +1376,7 @@ q) 마우스를 놓으면 이미지2로 서서히 변하도록 변하는 기능�
 2-4) transforming이라는 클래스를 부여했다가 다시 제거하자는건데, 
 
 4) 그런데 약간 시간차를 두고 제거하는게 좋을 것 같습니다. 
-setTimeout(function(){ 실행할코드 }, 기다릴시간)
+setTimeout(function(){ }, 기다릴시간)
 
 6) 오늘의 교훈은, 이미 터치기능이 있는 carousel 라이브러리를 설치하면, 이렇게 노가다할 필요가 없다라는 것입니다. 
 */
@@ -1387,7 +1387,7 @@ var 매니저 = new Hammer.Manager(이미지1);
 매니저.add(new Hammer.Pan({ threshold: 0 }));
     
 매니저.on('pan', function(e){
-      //console.log(e.deltaX);
+      console.log(e.deltaX);
       if ( e.deltaX < -1 ){
         $('.c40 .slide-container').css('transform', 'translateX('+ e.deltaX +'px)');
         
@@ -1404,3 +1404,56 @@ var 매니저 = new Hammer.Manager(이미지1);
       }
 });
 
+
+//  🦄c41 .innerHTML 원래글씨[0] (한글자씩 출현하는 Typewriting 애니메이션 만들기 1)
+/* 
+🍉 pseudo coding
+1. 버튼을 click,
+2. h1태그 안의 abcde라는 글자를 다 삭제한 다음에
+3. 0.5초 후에 h1태그안에 a를 더하고
+4. 1초 후에 h1태그안에 b를 더하고
+5. 1.5초 후에 h1태그안에 c를 더하고…
+*/
+
+/* 🍉
+1) 버튼을 click,
+1-2) .innerHTML : h1안의 글자만 가져옴+ 변수화
+
+2) h1태그 안의 abcde라는 글자를 다 삭제한 다음에
+
+3) 0.5초 후에 h1태그안에 a를 더하고
+3-2) 1초 후에 h1태그안에 b를 더하고
+3-3) 1.5초 후에 h1태그안에 c를 더하고…
+
+4)
+setTimeout(function(){ 실행할 코드 }, 1000)
+
+:특정 코드를 1초 후에 실행
+
+5)
+h1태그 내용에 h1태그 내용 + a를 추가해주세요~
+
+5-2)
+원래글씨[0]: h1태그에 원래있던 첫글자
+*/
+
+
+var h1태그 = document.querySelector('.c41 h1');
+var 원래글씨 = document.querySelector('.c41 h1').innerHTML;/* 1-2) */
+
+document.querySelector('.c41 button').addEventListener('click', function(){
+
+  h1태그.innerHTML = '';  /* 2) */
+
+  setTimeout(function(){ /* 4) */
+    h1태그.innerHTML = h1태그.innerHTML + 원래글씨[0] /* 3)  5)  5-2)*/
+  }, 500);
+
+  setTimeout(function(){ 
+    h1태그.innerHTML = h1태그.innerHTML + 원래글씨[1] /* 3-2) */
+  }, 1000)
+  
+  setTimeout(function(){ 
+    h1태그.innerHTML = h1태그.innerHTML + 원래글씨[2] /* 3-3) */
+  }, 1500)
+})
