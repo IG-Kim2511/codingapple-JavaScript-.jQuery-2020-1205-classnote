@@ -236,6 +236,42 @@ const 나이 = 33; X (let 나이 = 33; 다시 Assignment 가능)
  */
 
 
+//  🦄c15-2 scope
+
+/*
+ 2. var -  Function Level Scope 
+function밖에서 var x  쓸 수 없음 , 
+if 밖,for밖...등등 사용 가능 */
+
+function foo(){
+  if(true){
+      var x = 10;
+  }
+  console.log(x);/* 👉function안, if 밖 : 유효 */
+}
+foo();
+// console.log(x); 👉function밖: 에러
+
+
+/*
+3. let, const -  Block Level Scope 
+ if문을 벗어나면  let x  쓸 수 없음
+function , if , for...등등 curly braket { }밖 사용 불가능 */
+
+if(true){
+  let x = 10;
+}
+// console.log(x);  👉if 밖 : 에러
+
+
+//4.  Static Scope 👉캡쳐필기노트
+
+
+// 5. 클로져로 인해 반복문에서 발생할 수 있는 문제 👉캡쳐필기노트 , 42-2강
+
+
+
+
 //  🦄c16 변수, 사칙연산: 실력향상 과제
 
 /* 
@@ -1470,7 +1506,7 @@ document.querySelector('.c41 button').addEventListener('click', function(){
 4-2) 원래글씨[i] : 반복문이 돌 때마다 0,1,2,3.. 이렇게 변하는 변수가 들어가야하고 
 4-3) i * 500  : 반복문이 돌 때마다 500,1000,1500 이렇게 변하는 변수가 들어가야합니다. 
 
-6) let i : 
+6) let i :  (👉42-2강 캡쳐필기노트)
 근데 반복문을 이상하게 썼는지 에러가납니다.  
 a라는 문자가 아니라 계속 undefined라는 문자가 더해지는군요. 
 반복문에 있는 var이라는 변수를 let이라는 변수로 바꿔주시면 그런 일이 없습니다. 
