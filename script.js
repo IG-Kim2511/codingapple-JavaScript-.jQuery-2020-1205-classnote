@@ -201,6 +201,7 @@ change : 글 다 쓰고 끝났을때 (빈칸이 글로 채워지면서 value가 
 
 
 // 🦄c15 var let const 변수와 변수의 활용법
+// 🚀암기="어디스호"
 
 /* ●
 declaration : 변수 선언
@@ -227,13 +228,9 @@ let 나이;  X (var 나이; 가능함)
 if(){ }, function(){ }...등등 모든 { }에서 적용 
 
 const 나이 = 33; X (let 나이 = 33; 다시 Assignment 가능)
+
+●Hoisting 👉 js es6강의-8강
 */
-/* 
-변수의 Hoisting
-자바스크립트는 변수 선언부분을 항상 위로 강제로 끌어올려서 해석하는 습성이 있습니다. (할당은 아니고요 선언만요)
-함수 선언도 마찬가지로 코드 맨 위로 끌어올린 다음 해석을 합니다. 
-이걸 Hoisting이라고 부릅니다.
- */
 
 
 //  🦄c15-2 scope
@@ -769,6 +766,21 @@ Symbol
 Object 
 Function 
 null  
+
+1-3) 추가설명
+
+-a) undefined: 
+변수를 declare만하고, assign을 안했을때 나오는 data type
+
+-b) NaN:
+not a number (숫자가 아님)
+return value from operations 
+undefined numerical result
+part of the Number object
+
+still a numeric data type
+undefined as a real number
+
 */
 
 /* 영어
