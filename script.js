@@ -577,6 +577,19 @@ window라고 썼으니 viewport가 몇 px 스크롤되었는지 알려주겠죠?
 
 
 //🦄c25 scroll,classList.remove 스크롤을 다시 올리면 원래대로 (스크롤 애니메이션 2: 숙제)
+// 👉html, css
+
+/*
+0) pseudo-coding
+-1. 스크롤해서 특정 높이 넘어가면 폰트, 배경 변함
+
+-2. 스크롤 높이 찾음
+
+-3. 변하는 폰트, 배경.... css클래스에 지정시킨후, classList로 가져옴
+
+-4. 지정높이 외에서는 css클래스 remove
+*/
+
 /*  
 1) scroll eventLister는  하나만 쓰세요. 
 1초에 최대 60번 실행시키기 때문에, 실행횟수가 많아 브라우저가 간혹 느려짐
@@ -593,7 +606,7 @@ classList.remove
 window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
 
   if(window.scrollY > 1200){  /* 24-4) */
-    // console.log(scrollY)
+    console.log(scrollY)
     document.querySelector('.nav-menu').classList.add("nav-black"); /* 24-3) */
     document.querySelector('.nav-menu h4').classList.add("small-logo"); /* 25-2) */  
   } else{   /* 25-3) */  
@@ -601,6 +614,25 @@ window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
     document.querySelector('.nav-menu h4').classList.remove("small-logo");    
   }
 });
+
+
+/* 6) jquery문법 일때: 
+
+$(window).on('scroll',function(){
+  
+  if ( $(window).scrollTop() > 100 ) {
+
+    $('.nav-menu').addClass('nav-black');
+    $('.nav-menu h4').addClass('small-logo');
+
+  } else {
+    $('.nav-menu').removeClass('nav-black');
+    $('.nav-menu h4').removeClass('small-logo');
+  }
+});
+*/
+
+
 
 // 🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기 1)
 /* 
