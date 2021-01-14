@@ -556,7 +556,9 @@ slideNext.addEventListener('click',function(){
 });
 */
 
-// 🦄c24 scroll, scrollY (스크롤 애니메이션 1: 스크롤시 변하는 Navbar 만들기)
+// 🦄c24 scroll, scrollY, (jquery-scrollTop) (스크롤 애니메이션 1: 스크롤시 변하는 Navbar 만들기)
+// 👉html, css
+//👉 25강에서 통합해서 코딩완성했음
 
 /* 
 1) js 문법:  window.
@@ -569,10 +571,11 @@ window 라는건 viewport 입니다. (지금 보이는 브라우저 화면을 �
 4)
 scrollY
 왼쪽에 있는 요소(window)가 위에서부터 몇 px 스크롤 되었는지 알려줍니다. 
- window라고 썼으니 viewport가 몇 px 스크롤되었는지 알려주겠죠?
-  만약에 지금 위에서부터 1200px 이상 스크롤했을 때
- */
- 
+window라고 썼으니 viewport가 몇 px 스크롤되었는지 알려주겠죠?
+만약에 지금 위에서부터 1200px 이상 스크롤했을 때
+*/
+
+
 //🦄c25 scroll,classList.remove 스크롤을 다시 올리면 원래대로 (스크롤 애니메이션 2: 숙제)
 /*  
 1) scroll eventLister는  하나만 쓰세요. 
@@ -590,7 +593,7 @@ classList.remove
 window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
 
   if(window.scrollY > 1200){  /* 24-4) */
-    console.log(scrollY)
+    // console.log(scrollY)
     document.querySelector('.nav-menu').classList.add("nav-black"); /* 24-3) */
     document.querySelector('.nav-menu h4').classList.add("small-logo"); /* 25-2) */  
   } else{   /* 25-3) */  
