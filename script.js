@@ -86,19 +86,28 @@ function 안내창6_2(파라미터1,파라미터2){
 
 // 🦄c7 jQuery 설치, .html, .text, .css & querySelector
 
-/* 2)jquery */
+//  2) jQuery 문법
+document.querySelector('.c7 #title').innerHTML = '바보';
+$('#title').html('바보');
+
+// 2-2) jQuery 셀렉터
+
+$('#title');
+$('.box')
+
+/* 2-4) jQuery 함수/메소드   */
 
 $('#title').text('바보');
 $('#title').html('<p>바보</p>');
 $('#title').css('color', 'red');
 
-/*6) JS querySelector : 
 
-(예제 둘다 같은 뜻)
+/*6) JS querySelector : 
+(예제 둘다 같은 뜻)*/
 
 document.querySelector('#title6_2')
 
-document.getElementById('title6_2') */
+document.getElementById('title6_2') 
 
 
 // 🦄c8 addEventListener (이벤트 리스너)
