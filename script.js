@@ -11,9 +11,10 @@ document.getElementById("test").style.color = "red";
 
 
 
-// 🦄c3 onclick 속성으로 버튼 기능개발: Alert 박스 만들기
+// 🦄c3 onclick, .style.display (onclick 속성으로 버튼 기능개발)
+// 👉HTML
 
-// 🦄c4 function 문법으로 코드 줄이기/ 에러 체크하기
+// 🦄c4 function 문법/ console 에러 체크하기
 
 /* js 4-1)
 function: 긴 js문장을 한단어로 축약,여러번 재사용 할때
@@ -29,7 +30,7 @@ function alert닫기(){
 alert닫기();
 
   
-// 🦄c5 parameter: function을 쓰는 이유 (function의 두번째 기능)
+// 🦄c5 function 문법2. parameter (function의 두번째 기능)
 
 
 // js 5-1) function 2개 만듬
@@ -70,7 +71,7 @@ function alert5_3(파라미터1,파라미터2){
 // alert5_3('파라미터1','파라미터2');
 
 
-// 🦄c6 function과 파라미터 숙제 : UI 재사용하기
+// 🦄c6 function과 파라미터 숙제, .innerHTML
 
 /* js 6_2 */
 function 안내창6_2(파라미터1,파라미터2){
@@ -83,9 +84,15 @@ function 안내창6_2(파라미터1,파라미터2){
 안내창6_2('block','비번을 입력하세요.'); */
 
 
-// 🦄c7 jQuery 설치와 기초 셀렉터 & querySelector
+// 🦄c7 jQuery 설치, .html, .text, .css & querySelector
 
-/* querySelector : 
+/* 2)jquery */
+
+$('#title').text('바보');
+$('#title').html('<p>바보</p>');
+$('#title').css('color', 'red');
+
+/*6) JS querySelector : 
 
 (예제 둘다 같은 뜻)
 
@@ -791,6 +798,8 @@ undefined as a real number
 { } : curly bracket
 
 ( ) : parentheses , round bracket */
+
+/* 👉 29-4 es6강의 19 Reference data type */
 
 
 // 2) string '' "" `` 모두 사용가능
