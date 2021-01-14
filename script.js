@@ -696,7 +696,28 @@ tabBtn[1].addEventListener('click',function(){
 });
 
 
-// 🦄c27 for반복문. (탭기능 만들기 2: 모든 버튼 구현)
+/* jquery문법 : 
+1) 
+첫째 버튼을 클릭하면 
+  1. 첫째 버튼에 active라는 클래스를 추가해야함 
+  2. 첫째 내용에 show라는 클래스를 추가해야함 
+
+$('.tab-button').eq(0).click(function(){
+  $('.tab-button').eq(0).addClass('active');
+  $('.tab-content').eq(0).addClass('show');
+});
+
+2)
+$('.tab-button').eq(0).click(function(){ 
+  $('.tab-button').removeClass('active'); 
+  $('.tab-content').removeClass('show'); 
+
+  $('.tab-button').eq(0).addClass('active'); 
+  $('.tab-content').eq(0).addClass('show'); 
+});
+*/
+
+// 🦄c27 for반복문. (탭기능 만들기2: 모든 버튼 구현)
 
 /* 
 1) for 반복문
@@ -733,6 +754,7 @@ for (let i = 0; i < tabBtn.length; i++) {
 
 
 // 🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault e.stopPropagation
+// html, css
 
 /* 2)
 이벤트 버블링
