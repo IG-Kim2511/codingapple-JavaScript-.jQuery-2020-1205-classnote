@@ -619,7 +619,7 @@ window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
 /* 6) jquery문법 일때: 
 
 $(window).on('scroll',function(){
-  
+
   if ( $(window).scrollTop() > 100 ) {
 
     $('.nav-menu').addClass('nav-black');
@@ -633,12 +633,13 @@ $(window).on('scroll',function(){
 */
 
 
+// 🦄c26 css클래스(active show) 응용, querySelectorAll('.~~')[1] (탭기능 만들기1)
+// 👉css
 
-// 🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기 1)
 /* 
 Q: 1번 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
 
-알고리즘)
+pseudo-coding)
   1번 버튼을 누르면 
   0. 모든 버튼에 있는 active 클래스 제거
   0. 모든 내용에 있는 show 클래스 제거
@@ -664,7 +665,7 @@ querySelectorAll('.클래스이름')[1] : 전체클래스에서 1번째 선택
 */
 
 /* 4)
-???? :querySelectorAll 모두를 지정할 수 있는 방법은? --에러
+질문 :querySelectorAll 모두를 지정할 수 있는 방법은? --에러
 
 A: 한번에 여러개 싸잡아서 바꾸는건 jQuery만 가능한것이고
 쌩자바스크립트 사용시엔 이렇게 하나씩 써야합니다 다른 방법은 없습니다 
@@ -690,8 +691,8 @@ tabBtn[1].addEventListener('click',function(){
   tabContent[1].classList.remove('show');  
   tabContent[2].classList.remove('show');  
   
-tabBtn[1].classList.add('active');  /* 26-2 */
-tabContent[1].classList.add('show');  /* 26-3 */
+  tabBtn[1].classList.add('active');  /* 26-2 */
+  tabContent[1].classList.add('show');  /* 26-3 */
 });
 
 
