@@ -84,7 +84,7 @@ function 안내창6_2(파라미터1,파라미터2){
 안내창6_2('block','비번을 입력하세요.'); */
 
 
-// 🦄c7 jQuery 설치, .html, .text, .css & querySelector
+// 🦄c7 jQuery 설치, .html, .text, .css & JS - querySelector
 
 //  2) jQuery 문법
 document.querySelector('.c7 #title').innerHTML = '바보';
@@ -110,7 +110,7 @@ document.querySelector('#title6_2')
 document.getElementById('title6_2') 
 
 
-// 🦄c8 addEventListener (이벤트 리스너)
+// 🦄c8 jquery- .on(click,(.)=>{}), JS- addEventListener (이벤트 리스너)
 
 document.querySelector('.btn8').addEventListener('click',()=>{
   document.querySelector('.btn8').classList.toggle("red");
@@ -130,16 +130,16 @@ keydown
 scroll
 ...etc */
 
-// 🦄c9 Bootstrap 사용하기와 모달창 UI 개발
+// 🦄c9 jquery- .hide, .show, Bootstrap 사용하기
 /* 
 🚀UI만들기 공식
 1. HTML/CSS로 미리 디자인해놓기
 2. 평소엔 안보이게 숨기기
 3. 버튼을 눌렀을 때 보여주기  */
 
-// 🦄c10 jQuery의 toggle 함수. hide함수.click함수.
+// 🦄c10 jQuery의 .toggle .click .fadein .slidedown
 
-// 🦄c11 if/else 조건문을 배워보자
+// 🦄c11 if else 조건문, Pseudo-coding, js의 val(.)
 
 if ( 1 > 3 ) {
   console.log('안녕')
