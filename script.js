@@ -980,8 +980,7 @@ form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <text
 /* 
 Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈 UI를, 등장시키는 기능만들기  
 
-
-pseudo-coding: )
+⚡pseudo-coding: )
 
 3) select input에서 셔츠라는 값을 선택하면, UI를 보여줌
 
@@ -1006,19 +1005,19 @@ select1.addEventListener('change',()=>{     //2-1)
 });
 
 
-// 🦄c31 .innerHTML, double quotes, js로 html생성해서 html파일에 넣기. (인터랙티브 form 만들기2:)
+// 🦄c31 js로 html생성해서 html파일에 넣기, back quotes``(인터랙티브 form 만들기2:)
 
 /* 
 1) q: js로 html생성해서 html파일에 넣기. 
 셔츠, 바지를 선택하면 각각의 option3개를 만들어서 집어넣음
 
-2) 알고리즘:
+2) pseudo-coding
  2-1)만약, 사용자가 입력한  값이 '셔츠'라면
  2-2)셔츠용 option을 원하는곳에 innerHTML   (jQuery : append(); )
  2-3)'var 템플릿'를 만들어서 재활용. (굳이 하드코딩으로 또 만들 필요 없음)
 
 3) es6문법 back quotes symbol 사용하면 엔터키 가능
- (일반 quotes symbol에서는 엔터키 ❌)   */
+ (double quotes symbol"" 에서는 엔터키 ❌)   */
 
 var select31 = document.querySelector('#select31');
 var select31_2 = document.querySelector('#select31-2');
