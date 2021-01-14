@@ -202,7 +202,7 @@ function 삼육구게임(숫자){
   }
 }
 
-// 🦄c14 else if 활용 : 폼 전송시 공백체크 기능 만들기
+// 🦄c14 else if 활용, form관련 이벤트 submit, input, change, .value, ""빈칸
 // 👉c30강에서 다시 다룸 + 정리 되어있음
 
 /* 
@@ -220,8 +220,8 @@ change : 글 다 쓰고 끝났을때 (빈칸이 글로 채워지면서 value가 
 // 🚀암기="어디스호"
 
 /* ●
-declaration : 변수 선언
 Assignment : 변수 할당
+declaration : 변수 선언
 scope : 변수 범위
 
 ●
@@ -233,10 +233,10 @@ closure :
 function안에서 만든 변수, 밖에서 쓸 수 없음
 
 ●var
-function(){ } 에서만 적용
+closure적용 : function(){ }에서만 적용 (function안의 if, for loop에서는 적용x)
 
 ●let
-if(){ }, function(){ }...등등 모든 { }에서 적용 
+closure적용 : function(){ }, if(){ }, for loop{ } ...등등 모든 { }에서 적용 (즉, var보다 더 빡세게 범위를 좁힘)
 
 let 나이;  X (var 나이; 가능함)
 
@@ -340,10 +340,12 @@ var 리필양 = (첫커피양 * 2 / 3);
 console.log(마신커피)
 
 
-// 🦄c17 jQuery Animate 함수(애니메이션 UI 1 :)
+// 🦄c17 jQuery .Animate(.)(애니메이션 UI 1 :)
 /* 
 camelCase작명법
 '-'는 js에서 뺄셈을 의미해서 작명에  쓸수없음 */
+
+//  $('.left-menu').animate({ marginLeft : '0px' });
 
 
 // 🦄c18 JS 애니메이션 만드는 공식/ 팁 (애니메이션 UI 2 : Slide Down 모달창 만들기 & 애니메이션 필수 팁)
