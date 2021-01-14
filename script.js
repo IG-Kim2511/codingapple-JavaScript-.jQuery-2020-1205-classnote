@@ -834,53 +834,7 @@ select	option 태그 등에서 선택을 햇을 때 발생
 */
 
 
-// 🦄c29 Array. Object. data type (Array 와 Object 자료형 기초)
-
-/* 1) Data Types :
-
-1-1) primitives Data Types :
-
-undefined  
-
-Boolean
-Number 
-String
-BigInt 
-Symbol 
-
-1-2) Structural Types:
-
-Object 
-Function 
-null  
-
-1-3) 추가설명
-
--a) undefined: 
-변수를 declare만하고, assign을 안했을때 나오는 data type
-
--b) NaN:
-not a number (숫자가 아님)
-return value from operations 
-undefined numerical result
-part of the Number object
-
-still a numeric data type
-undefined as a real number
-
-*/
-
-/* 영어
-[ ] { } ( ) : 모든 것 총칭 :  bracket
-
-[ ] : square bracket 
-
-{ } : curly bracket
-
-( ) : parentheses , round bracket */
-
-/* 👉 29-4 es6강의 19 Reference data type */
-
+// 🦄c29 Object, Array 기초, data binding
 
 // 2) string '' "" `` 모두 사용가능
 
@@ -946,22 +900,61 @@ console.log(dataObject2.object2.key3); /* 사용방법 */
 data binding : 
 자바스크립트로 데이터를 HTML에 꽂아넣는 작업
 
-Q: array, object 내의 데이터(실전에서의 서버데이터)를 👉 html로 보내서 바꾸기
- */
+Q: array, object , array안의 object의 데이터(실전에서의 서버데이터)를 👉 html로 보내서 바꾸기
+*/
 
 var array7=['LG', 'samsung'];
 
 var object7 = { brand:'apple' , price : 5000};
 
-var arrayWithObject = [{brand:'amazon'}, {price:300}]
+var arrayWithObject = [{brand:'amazon'}, {price:300}]   //array안의 object
 
 document.querySelector('#btn29').addEventListener('click',()=>{
+
   document.querySelector('#data29').innerHTML = array7[0]  /* array */
 
   document.querySelector('#data29_2').innerHTML = object7.price /* object */
 
   document.querySelector('#data29_3').innerHTML = arrayWithObject[0].brand /* array안의 object */
 });
+
+
+//🦄29-2,3,4 me정리) 기본 Data type(자료형) 정리
+
+/* 1) Data Types :
+
+1-1) primitives Data Types :
+
+undefined  
+
+Boolean
+Number 
+String
+BigInt 
+Symbol 
+
+1-2) Structural Types:
+
+Object 
+Function 
+null  
+
+1-3) 추가설명
+
+-a) undefined: 
+변수를 declare만하고, assign을 안했을때 나오는 data type
+
+-b) NaN:
+not a number (숫자가 아님)
+return value from operations 
+undefined numerical result
+part of the Number object
+
+still a numeric data type
+undefined as a real number
+*/
+
+// 👉 29-4 es6강의 19 Reference data type
 
 
 //🦄c30 input과 change 이벤트 .value (인터랙티브 form 만들기: )
@@ -988,7 +981,8 @@ form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <text
 Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈 UI를, 등장시키는 기능만들기  
 
 
-알고리즘: 
+pseudo-coding: )
+
 3) select input에서 셔츠라는 값을 선택하면, UI를 보여줌
 
 4-1) 만약,사용자가 선택한 값이, 셔츠인경우, ui를 보여줌
@@ -1002,8 +996,8 @@ var select1 = document.querySelector('#select1');
 
 var sizeSelect = document.querySelector('.size-select');
 
-select1.addEventListener('change',()=>{
-
+select1.addEventListener('change',()=>{     //2-1)
+    
   if(select1.value =='셔츠'){   /* 4-1)  5) */
     sizeSelect.classList.add('display-block');  /* 4-1) */
   } else{
