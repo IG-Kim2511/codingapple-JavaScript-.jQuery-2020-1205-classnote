@@ -1415,45 +1415,28 @@ var 제이슨 = JSON.stringify(여러분의 오브젝트데이터)
 // 🦄c37 (CSS) Position : sticky 활용하기
 // 👉css 파일
 
-
-
 //🦄c38 sticky, scroll, opacity 스크롤 위치에 따라 변하는 애니메이션 
-
 //  👉css 파일
 //  👻캡쳐 필기정리 :  1차함수....이용하는데 이해 못함
 
- 
-/* 이거 비슷한것 같은데 답을 못찾겠음 1
+// 스크롤 내리면 뒷장의 카드가 서서히 사라짐
+// 1차함수 이용
 
-$(document).ready(function(){ 
-  $(window).scroll(function(){ 
-      $('.card-box38').css("opacity",1- $(window).scrollTop() / 6700) 
-       
-  }) 
-})  */
+$(window).scroll(function(){
 
-/*  이거 비슷한것 같은데 답을 못찾겠음 2
+  var 높이 = $(window).scrollTop();
+  console.log(높이);
 
-var fadeStart=6580 // 100px scroll or less will equiv to 1 opacity
-,fadeUntil=7030 // 200px scroll or more will equiv to 0 opacity
-,fading = $('#fading')
-;
+  var y =  -1/500 * 높이 + 115/50;
+  $('.card-box38').eq(0).css('opacity', y);
 
-$(window).bind('scroll', function(){
-var offset = $(document).scrollTop()
-    ,opacity=0
-;
-if( offset<=fadeStart ){
-    opacity=1;
-}else if( offset<=fadeUntil ){
-    opacity=1-offset/fadeUntil;
-}
+  var z = (-1/5000) * 높이 + 565/500;
+  $('.card-box38').eq(0).css('transform', `scale( ${z} )`);
 
-$('.card-box38').eq(0).css('opacity',opacity);
-}); */
+});
 
 
-// 🦄c39 Hammer.js: new Hammer.Manager() .add() Pann( { threshold:0 }) e.deltaX (Hammer.js로 이미지 슬라이드 터치 기능 만들기 1)
+// 🦄c39 Hammer.js 라이브러리로 이미지 슬라이드 터치 기능 만들기 1
 
 /* 
 1) Hammer.js (-터치전용 프레임워크), jQuery 검색해서 다운받아 HTML에 첨부
@@ -1493,7 +1476,7 @@ var 매니저 = new Hammer.Manager(이미지1); /* 2) */
 })
 
 
-// 🦄c40 Hammer.js: e.isFinal setTimeout (이미지 슬라이드 터치 기능 만들기 2)
+// 🦄c40 Hammer.js 라이브러리로 이미지 슬라이드 터치 기능 만들기 2
 
 /* 
 q) 마우스를 놓으면 이미지2로 서서히 변하도록 변하는 기능을 더해봅시다.
