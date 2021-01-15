@@ -84,24 +84,33 @@ function 안내창6_2(파라미터1,파라미터2){
 안내창6_2('block','비번을 입력하세요.'); */
 
 
-// 🦄c7 jQuery 설치, .html, .text, .css & querySelector
+// 🦄c7 jQuery 설치, .html, .text, .css & JS - querySelector
 
-/* 2)jquery */
+//  2) jQuery 문법
+document.querySelector('.c7 #title').innerHTML = '바보';
+$('#title').html('바보');
+
+// 2-2) jQuery 셀렉터
+
+$('#title');
+$('.box')
+
+/* 2-4) jQuery 함수/메소드   */
 
 $('#title').text('바보');
 $('#title').html('<p>바보</p>');
 $('#title').css('color', 'red');
 
-/*6) JS querySelector : 
 
-(예제 둘다 같은 뜻)
+/*6) JS querySelector : 
+(예제 둘다 같은 뜻)*/
 
 document.querySelector('#title6_2')
 
-document.getElementById('title6_2') */
+document.getElementById('title6_2') 
 
 
-// 🦄c8 addEventListener (이벤트 리스너)
+// 🦄c8 jquery- .on(click,(.)=>{}), JS- addEventListener (이벤트 리스너)
 
 document.querySelector('.btn8').addEventListener('click',()=>{
   document.querySelector('.btn8').classList.toggle("red");
@@ -121,16 +130,16 @@ keydown
 scroll
 ...etc */
 
-// 🦄c9 Bootstrap 사용하기와 모달창 UI 개발
+// 🦄c9 jquery- .hide, .show, Bootstrap 사용하기
 /* 
 🚀UI만들기 공식
 1. HTML/CSS로 미리 디자인해놓기
 2. 평소엔 안보이게 숨기기
 3. 버튼을 눌렀을 때 보여주기  */
 
-// 🦄c10 jQuery의 toggle 함수. hide함수.click함수.
+// 🦄c10 jQuery의 .toggle .click .fadein .slidedown
 
-// 🦄c11 if/else 조건문을 배워보자
+// 🦄c11 if else 조건문, Pseudo-coding, js의 val(.)
 
 if ( 1 > 3 ) {
   console.log('안녕')
@@ -193,7 +202,7 @@ function 삼육구게임(숫자){
   }
 }
 
-// 🦄c14 else if 활용 : 폼 전송시 공백체크 기능 만들기
+// 🦄c14 else if 활용, form관련 이벤트 submit, input, change, .value, ""빈칸
 // 👉c30강에서 다시 다룸 + 정리 되어있음
 
 /* 
@@ -211,8 +220,8 @@ change : 글 다 쓰고 끝났을때 (빈칸이 글로 채워지면서 value가 
 // 🚀암기="어디스호"
 
 /* ●
-declaration : 변수 선언
 Assignment : 변수 할당
+declaration : 변수 선언
 scope : 변수 범위
 
 ●
@@ -224,10 +233,10 @@ closure :
 function안에서 만든 변수, 밖에서 쓸 수 없음
 
 ●var
-function(){ } 에서만 적용
+closure적용 : function(){ }에서만 적용 (function안의 if, for loop에서는 적용x)
 
 ●let
-if(){ }, function(){ }...등등 모든 { }에서 적용 
+closure적용 : function(){ }, if(){ }, for loop{ } ...등등 모든 { }에서 적용 (즉, var보다 더 빡세게 범위를 좁힘)
 
 let 나이;  X (var 나이; 가능함)
 
@@ -331,13 +340,18 @@ var 리필양 = (첫커피양 * 2 / 3);
 console.log(마신커피)
 
 
-// 🦄c17 jQuery Animate 함수(애니메이션 UI 1 :)
+// 🦄c17 jQuery .Animate(.)(애니메이션 UI 1 :)
 /* 
 camelCase작명법
 '-'는 js에서 뺄셈을 의미해서 작명에  쓸수없음 */
 
+/*
+ $('#show-menu').click(function(){
+  $('.left-menu').animate({ marginLeft : '0px' });
+}); 
+*/
 
-// 🦄c18 JS 애니메이션 만드는 공식/ 팁 (애니메이션 UI 2 : Slide Down 모달창 만들기 & 애니메이션 필수 팁)
+// 🦄c18 JS 애니메이션 만드는 공식/ 필수 팁, .classList(jquery-.addClass) (애니메이션 UI 2 :)
 // 👉c8 button
 
 /* 
@@ -370,7 +384,7 @@ transform, opacity
 매우 빠르게 처리해줍니다. */
 
 
-// 🦄c19 Regular expressions (정규표현식으로 이메일 형식 검증해보기)
+// 🦄c19 Regular expressions, /~~/.test(~~) (정규표현식으로 이메일 형식 검증해보기)
 
 /* 
 어떤 문자에 ‘abc’라는 단어가 들어가있나요? 라고 물어보고 싶을 때 쓰시면 됩니다. 
@@ -392,10 +406,10 @@ const result = /^hello/.test(str);
 
 console.log(result); // true
 
- /* 
- 정규식 문법은 너무 많아서 외워서 쓰기도 힘들고 외울 필요도 없습니다. (
-    
-  /t/
+/* 
+정규식 문법은 너무 많아서 외워서 쓰기도 힘들고 외울 필요도 없습니다. (
+  
+/t/
 이렇게 글자를 그대로 때려박으시면 t라는 글자가 있는지 없는지 물어보실 수 있습니다. 
 
 /[A-D]/
@@ -443,8 +457,6 @@ console.log(result); // true
 */
 
 
-
-
 // 🦄c20 Regular expressions 2 (정규식 숙제 : 비밀번호 검증하기)
 
 /* 
@@ -457,12 +469,16 @@ html에서의<input type="text">
 // 2) 이메일 형식 검사와 공백검사를 동시에?
 
 
-// 🦄c21 슬라이드 만들기 1: UI와 버튼기능
+// 🦄c21 슬라이드 만들기 1: UI와 버튼기능, .style.transform = "translateX(-100vw)"
+// 👉HTML, CSS
 
 /* 
  js 21-2) 큰 박스(.slide-container)를 옆으로 움직임
  
- .style.transform = "translateX(-100vw)"*/
+ .style.transform = "translateX(-100vw)"
+ 
+ -4) jquery 방식: 
+ $('.slide-container').css('transform','translateX(-100vw)');*/
 
 document.querySelector('.slide-1').addEventListener('click',function(){
   document.querySelector('.slide-container').style.transform = "translateX(0)";
@@ -477,16 +493,16 @@ document.querySelector('.slide-3').addEventListener('click',function(){
 });
 
 
-// 🦄c22 슬라이드 만들기 2 : Next 버튼 만들기
+// 🦄c22 슬라이드 만들기2, Next 버튼 만들기
 
 /* 
-js 22-3) 한글로 먼저 표현 후, 코딩
+js 22-3) Pseudo-coding
 
 3-1) 알고리즘
 Next 버튼을 클릭하면..
 만약에 지금 사진1을 보고있으면, 사진2를 보여주고  
 
-3-4)
+3-5)
 3이하일때만 지금보이는사진을 2로 바꿈(총 사진갯수3개)
  
 3-2)
@@ -495,23 +511,27 @@ Next 버튼을 클릭하면..
 default값 1 
 
 3-3)
+지금보이는사진이 2라고 알려줘야 함
+
+3-4)
 만약에 지금 사진2를 보고있으면, 사진3을 보여주기..
 (3이하일때만 (총 사진갯수3개)) (+지금보이는 사진을 3으로 바꿈)
 */
 
-// 3-2)
-var 지금보이는사진 = 1;
+// 소프트코딩
+
+var 지금보이는사진 = 1;   // 3-2)
 
 var slideNext = document.querySelector('.slide-next');
 var slideContainer = document.querySelector('.slide-container');
 
 slideNext.addEventListener('click',function(){
 
-  if(지금보이는사진 == 1){   /* 3-1) 3-3) */
+  if(지금보이는사진 == 1){    // 3-1) 3-4)
     slideContainer.style.transform = `translateX(-${지금보이는사진}00vw)`;
     
-    if ( 지금보이는사진 < 3 ) {  /* 3-4)*/
-      지금보이는사진 = 지금보이는사진 + 1;}    
+    if ( 지금보이는사진 < 3 ) {  //3-5)
+      지금보이는사진 = 지금보이는사진 + 1;}    //3-3)
   }
 
   else if( 지금보이는사진 == 2){
@@ -524,9 +544,11 @@ slideNext.addEventListener('click',function(){
 
 /* 하드코딩
 slideNext.addEventListener('click',function(){
+
   if(지금보이는사진 == 1){
     slideContainer.style.transform = "translateX(-100vw)";
     지금보이는사진 = 2;     
+
   } else if( 지금보이는사진 == 2){
     slideContainer.style.transform = "translateX(-200vw)";   
     지금보이는사진 = 3;   
@@ -534,7 +556,9 @@ slideNext.addEventListener('click',function(){
 });
 */
 
-// 🦄c24 scroll, scrollY (스크롤 애니메이션 1: 스크롤시 변하는 Navbar 만들기)
+// 🦄c24 scroll, scrollY, (jquery-scrollTop) (스크롤 애니메이션 1: 스크롤시 변하는 Navbar 만들기)
+// 👉html, css
+//👉 25강에서 통합해서 코딩완성했음
 
 /* 
 1) js 문법:  window.
@@ -547,11 +571,25 @@ window 라는건 viewport 입니다. (지금 보이는 브라우저 화면을 �
 4)
 scrollY
 왼쪽에 있는 요소(window)가 위에서부터 몇 px 스크롤 되었는지 알려줍니다. 
- window라고 썼으니 viewport가 몇 px 스크롤되었는지 알려주겠죠?
-  만약에 지금 위에서부터 1200px 이상 스크롤했을 때
- */
- 
+window라고 썼으니 viewport가 몇 px 스크롤되었는지 알려주겠죠?
+만약에 지금 위에서부터 1200px 이상 스크롤했을 때
+*/
+
+
 //🦄c25 scroll,classList.remove 스크롤을 다시 올리면 원래대로 (스크롤 애니메이션 2: 숙제)
+// 👉html, css
+
+/*
+0) pseudo-coding
+-1. 스크롤해서 특정 높이 넘어가면 폰트, 배경 변함
+
+-2. 스크롤 높이 찾음
+
+-3. 변하는 폰트, 배경.... css클래스에 지정시킨후, classList로 가져옴
+
+-4. 지정높이 외에서는 css클래스 remove
+*/
+
 /*  
 1) scroll eventLister는  하나만 쓰세요. 
 1초에 최대 60번 실행시키기 때문에, 실행횟수가 많아 브라우저가 간혹 느려짐
@@ -577,11 +615,31 @@ window.addEventListener('scroll',function(){  /* 24-1) 24-2) */
   }
 });
 
-// 🦄c26 active show 클래스 응용. querySelectorAll('.~~')[1] (탭기능 만들기 1)
+
+/* 6) jquery문법 일때: 
+
+$(window).on('scroll',function(){
+
+  if ( $(window).scrollTop() > 100 ) {
+
+    $('.nav-menu').addClass('nav-black');
+    $('.nav-menu h4').addClass('small-logo');
+
+  } else {
+    $('.nav-menu').removeClass('nav-black');
+    $('.nav-menu h4').removeClass('small-logo');
+  }
+});
+*/
+
+
+// 🦄c26 css클래스(active show) 응용, querySelectorAll('.~~')[1] (탭기능 만들기1)
+// 👉css
+
 /* 
 Q: 1번 버튼클릭하면, css로 색넣고, 해당탭의 내용 보여줌
 
-알고리즘)
+pseudo-coding)
   1번 버튼을 누르면 
   0. 모든 버튼에 있는 active 클래스 제거
   0. 모든 내용에 있는 show 클래스 제거
@@ -607,7 +665,7 @@ querySelectorAll('.클래스이름')[1] : 전체클래스에서 1번째 선택
 */
 
 /* 4)
-???? :querySelectorAll 모두를 지정할 수 있는 방법은? --에러
+질문 :querySelectorAll 모두를 지정할 수 있는 방법은? --에러
 
 A: 한번에 여러개 싸잡아서 바꾸는건 jQuery만 가능한것이고
 쌩자바스크립트 사용시엔 이렇게 하나씩 써야합니다 다른 방법은 없습니다 
@@ -633,12 +691,33 @@ tabBtn[1].addEventListener('click',function(){
   tabContent[1].classList.remove('show');  
   tabContent[2].classList.remove('show');  
   
-tabBtn[1].classList.add('active');  /* 26-2 */
-tabContent[1].classList.add('show');  /* 26-3 */
+  tabBtn[1].classList.add('active');  /* 26-2 */
+  tabContent[1].classList.add('show');  /* 26-3 */
 });
 
 
-// 🦄c27 for반복문. (탭기능 만들기 2: 모든 버튼 구현)
+/* jquery문법 : 
+1) 
+첫째 버튼을 클릭하면 
+  1. 첫째 버튼에 active라는 클래스를 추가해야함 
+  2. 첫째 내용에 show라는 클래스를 추가해야함 
+
+$('.tab-button').eq(0).click(function(){
+  $('.tab-button').eq(0).addClass('active');
+  $('.tab-content').eq(0).addClass('show');
+});
+
+2)
+$('.tab-button').eq(0).click(function(){ 
+  $('.tab-button').removeClass('active'); 
+  $('.tab-content').removeClass('show'); 
+
+  $('.tab-button').eq(0).addClass('active'); 
+  $('.tab-content').eq(0).addClass('show'); 
+});
+*/
+
+// 🦄c27 for반복문. (탭기능 만들기2: 모든 버튼 구현)
 
 /* 
 1) for 반복문
@@ -675,6 +754,7 @@ for (let i = 0; i < tabBtn.length; i++) {
 
 
 // 🦄c28 event bubbling. e.target e.currentTarget this. e.preventDefault e.stopPropagation
+// html, css
 
 /* 2)
 이벤트 버블링
@@ -754,53 +834,7 @@ select	option 태그 등에서 선택을 햇을 때 발생
 */
 
 
-// 🦄c29 Array. Object. data type (Array 와 Object 자료형 기초)
-
-/* 1) Data Types :
-
-1-1) primitives Data Types :
-
-undefined  
-
-Boolean
-Number 
-String
-BigInt 
-Symbol 
-
-1-2) Structural Types:
-
-Object 
-Function 
-null  
-
-1-3) 추가설명
-
--a) undefined: 
-변수를 declare만하고, assign을 안했을때 나오는 data type
-
--b) NaN:
-not a number (숫자가 아님)
-return value from operations 
-undefined numerical result
-part of the Number object
-
-still a numeric data type
-undefined as a real number
-
-*/
-
-/* 영어
-[ ] { } ( ) : 모든 것 총칭 :  bracket
-
-[ ] : square bracket 
-
-{ } : curly bracket
-
-( ) : parentheses , round bracket */
-
-/* 👉 29-4 es6강의 19 Reference data type */
-
+// 🦄c29 Object, Array 기초, data binding
 
 // 2) string '' "" `` 모두 사용가능
 
@@ -866,22 +900,61 @@ console.log(dataObject2.object2.key3); /* 사용방법 */
 data binding : 
 자바스크립트로 데이터를 HTML에 꽂아넣는 작업
 
-Q: array, object 내의 데이터(실전에서의 서버데이터)를 👉 html로 보내서 바꾸기
- */
+Q: array, object , array안의 object의 데이터(실전에서의 서버데이터)를 👉 html로 보내서 바꾸기
+*/
 
 var array7=['LG', 'samsung'];
 
 var object7 = { brand:'apple' , price : 5000};
 
-var arrayWithObject = [{brand:'amazon'}, {price:300}]
+var arrayWithObject = [{brand:'amazon'}, {price:300}]   //array안의 object
 
 document.querySelector('#btn29').addEventListener('click',()=>{
+
   document.querySelector('#data29').innerHTML = array7[0]  /* array */
 
   document.querySelector('#data29_2').innerHTML = object7.price /* object */
 
   document.querySelector('#data29_3').innerHTML = arrayWithObject[0].brand /* array안의 object */
 });
+
+
+//🦄29-2,3,4 me정리) 기본 Data type(자료형) 정리
+
+/* 1) Data Types :
+
+1-1) primitives Data Types :
+
+undefined  
+
+Boolean
+Number 
+String
+BigInt 
+Symbol 
+
+1-2) Structural Types:
+
+Object 
+Function 
+null  
+
+1-3) 추가설명
+
+-a) undefined: 
+변수를 declare만하고, assign을 안했을때 나오는 data type
+
+-b) NaN:
+not a number (숫자가 아님)
+return value from operations 
+undefined numerical result
+part of the Number object
+
+still a numeric data type
+undefined as a real number
+*/
+
+// 👉 29-4 es6강의 19 Reference data type
 
 
 //🦄c30 input과 change 이벤트 .value (인터랙티브 form 만들기: )
@@ -907,8 +980,8 @@ form 안에서 사용자가 값을 입력할 수 있는 <input>, <select>, <text
 /* 
 Q: 셔츠를 선택하면, 숨어있던 셔츠사이즈 UI를, 등장시키는 기능만들기  
 
+⚡pseudo-coding: )
 
-알고리즘: 
 3) select input에서 셔츠라는 값을 선택하면, UI를 보여줌
 
 4-1) 만약,사용자가 선택한 값이, 셔츠인경우, ui를 보여줌
@@ -922,8 +995,8 @@ var select1 = document.querySelector('#select1');
 
 var sizeSelect = document.querySelector('.size-select');
 
-select1.addEventListener('change',()=>{
-
+select1.addEventListener('change',()=>{     //2-1)
+    
   if(select1.value =='셔츠'){   /* 4-1)  5) */
     sizeSelect.classList.add('display-block');  /* 4-1) */
   } else{
@@ -932,19 +1005,19 @@ select1.addEventListener('change',()=>{
 });
 
 
-// 🦄c31 .innerHTML, double quotes, js로 html생성해서 html파일에 넣기. (인터랙티브 form 만들기2:)
+// 🦄c31 js로 html생성해서 html파일에 넣기, back quotes``(인터랙티브 form 만들기2:)
 
 /* 
 1) q: js로 html생성해서 html파일에 넣기. 
 셔츠, 바지를 선택하면 각각의 option3개를 만들어서 집어넣음
 
-2) 알고리즘:
+2) pseudo-coding
  2-1)만약, 사용자가 입력한  값이 '셔츠'라면
  2-2)셔츠용 option을 원하는곳에 innerHTML   (jQuery : append(); )
  2-3)'var 템플릿'를 만들어서 재활용. (굳이 하드코딩으로 또 만들 필요 없음)
 
 3) es6문법 back quotes symbol 사용하면 엔터키 가능
- (일반 quotes symbol에서는 엔터키 ❌)   */
+ (double quotes symbol"" 에서는 엔터키 ❌)   */
 
 var select31 = document.querySelector('#select31');
 var select31_2 = document.querySelector('#select31-2');
@@ -1342,45 +1415,28 @@ var 제이슨 = JSON.stringify(여러분의 오브젝트데이터)
 // 🦄c37 (CSS) Position : sticky 활용하기
 // 👉css 파일
 
-
-
 //🦄c38 sticky, scroll, opacity 스크롤 위치에 따라 변하는 애니메이션 
-
 //  👉css 파일
 //  👻캡쳐 필기정리 :  1차함수....이용하는데 이해 못함
 
- 
-/* 이거 비슷한것 같은데 답을 못찾겠음 1
+// 스크롤 내리면 뒷장의 카드가 서서히 사라짐
+// 1차함수 이용
 
-$(document).ready(function(){ 
-  $(window).scroll(function(){ 
-      $('.card-box38').css("opacity",1- $(window).scrollTop() / 6700) 
-       
-  }) 
-})  */
+$(window).scroll(function(){
 
-/*  이거 비슷한것 같은데 답을 못찾겠음 2
+  var 높이 = $(window).scrollTop();
+  console.log(높이);
 
-var fadeStart=6580 // 100px scroll or less will equiv to 1 opacity
-,fadeUntil=7030 // 200px scroll or more will equiv to 0 opacity
-,fading = $('#fading')
-;
+  var y =  -1/500 * 높이 + 115/50;
+  $('.card-box38').eq(0).css('opacity', y);
 
-$(window).bind('scroll', function(){
-var offset = $(document).scrollTop()
-    ,opacity=0
-;
-if( offset<=fadeStart ){
-    opacity=1;
-}else if( offset<=fadeUntil ){
-    opacity=1-offset/fadeUntil;
-}
+  var z = (-1/5000) * 높이 + 565/500;
+  $('.card-box38').eq(0).css('transform', `scale( ${z} )`);
 
-$('.card-box38').eq(0).css('opacity',opacity);
-}); */
+});
 
 
-// 🦄c39 Hammer.js: new Hammer.Manager() .add() Pann( { threshold:0 }) e.deltaX (Hammer.js로 이미지 슬라이드 터치 기능 만들기 1)
+// 🦄c39 Hammer.js 라이브러리로 이미지 슬라이드 터치 기능 만들기 1
 
 /* 
 1) Hammer.js (-터치전용 프레임워크), jQuery 검색해서 다운받아 HTML에 첨부
@@ -1420,7 +1476,7 @@ var 매니저 = new Hammer.Manager(이미지1); /* 2) */
 })
 
 
-// 🦄c40 Hammer.js: e.isFinal setTimeout (이미지 슬라이드 터치 기능 만들기 2)
+// 🦄c40 Hammer.js 라이브러리로 이미지 슬라이드 터치 기능 만들기 2
 
 /* 
 q) 마우스를 놓으면 이미지2로 서서히 변하도록 변하는 기능을 더해봅시다.
