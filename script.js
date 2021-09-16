@@ -139,7 +139,7 @@ scroll
 
 // 🦄c10 jQuery의 .toggle .click .fadein .slidedown
 
-// 🦄c11 if else 조건문, Pseudo-coding, js의 val(.)
+// 🦄c11 if else conditional statement, Pseudo-coding, js의 val(.) (1).jpg
 
 if ( 1 > 3 ) {
   console.log('안녕')
